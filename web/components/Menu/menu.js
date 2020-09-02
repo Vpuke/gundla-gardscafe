@@ -8,6 +8,7 @@ const StyledMenu = styled.nav`
   background: #000000;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   height: 100vh;
+  width: 100vw;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -20,6 +21,24 @@ const StyledMenu = styled.nav`
     height: 100vh;
     margin: 0;
     padding: 0;
+  }
+
+  .information {
+    height: auto;
+    color: white;
+    position: relative;
+  }
+
+  .burger-contact {
+    position: absolute;
+    bottom: -9rem;
+    left: 1rem;
+  }
+
+  .burger-opening-hours {
+    position: absolute;
+    bottom: -9rem;
+    right: 1rem;
   }
 
   a {
@@ -47,7 +66,19 @@ const Menu = ({ open }) => {
   return (
     <nav>
       <StyledMenu open={open}>
-        <a href="/">Home</a>
+        <a href="/">Hem</a>
+        <a href="/">Om oss</a>
+        <a href="/">Meny</a>
+        <a href="/">Boka Event</a>
+        <div className="information">
+          <p className="burger-contact">
+            Kontakta oss <br></br> 0708-840717 <br></br>{" "}
+            gundlagardscafe@gmail.com
+          </p>
+          <p className="burger-opening-hours">
+            Öppettider <br></br> Lördag: 11-19 <br></br> Söndag: 10-17
+          </p>
+        </div>
       </StyledMenu>
     </nav>
   );
