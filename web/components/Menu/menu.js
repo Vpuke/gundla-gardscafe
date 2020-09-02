@@ -5,7 +5,9 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #000000;
+  background: url("/menumobile-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   height: 100vh;
   width: 100vw;
@@ -15,6 +17,12 @@ const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+
+  .menu-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
 
   @media (max-width: 576px) {
     width: 100vw;
@@ -57,7 +65,7 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      color: #343078;
+      color: #ada4a3;
     }
   }
 `;
@@ -66,6 +74,7 @@ const Menu = ({ open }) => {
   return (
     <nav>
       <StyledMenu open={open}>
+        <img className="menu-logo" src="/menu-logo.svg"></img>
         <a href="/">Hem</a>
         <a href="/">Om oss</a>
         <a href="/">Meny</a>
