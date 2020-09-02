@@ -45,9 +45,11 @@ const StyledMenu = styled.nav`
 
 const Menu = ({ open }) => {
   return (
-    <StyledMenu open={open}>
-      <a href="/">Home</a>
-    </StyledMenu>
+    <nav>
+      <StyledMenu open={open}>
+        <a href="/">Home</a>
+      </StyledMenu>
+    </nav>
   );
 };
 
