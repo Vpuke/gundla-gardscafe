@@ -1,19 +1,16 @@
-import client from '../client'
+import client from "../client";
+import Menu from "../components/Menu/menu";
+import Burger from "../components/Hamburger/hamburger";
 
-const Index = (props) => {
-  console.log(props);
+const Index = () => {
+  const [open, setOpen] = React.useState(false);
+  const node = React.useRef();
   return (
-    <div>
-      <h1>{props.name}</h1>
-      <p>{props.description}</p>
+    <div ref={node}>
+      <Burger open={open} setOpen={setOpen} />
+      <Menu open={open} setOpen={setOpen} />
     </div>
   );
 };
-Index.getInitialProps = async function(context) {
-  // It's important to default the slug so that it doesn't return "undefined"
-  const { slug = "" } = context.query
-  return await client.fetch(`
-    *[_type == "eventInformation"][0]
-  `, { slug })
-}
+
 export default Index;
