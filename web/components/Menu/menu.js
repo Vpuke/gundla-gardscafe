@@ -70,15 +70,15 @@ const StyledMenu = styled.nav`
   }
 `;
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
   return (
     <nav>
       <StyledMenu open={open}>
         <img className="menu-logo" src="/menu-logo.svg"></img>
         <a href="/">Hem</a>
-        <a href="/">Om oss</a>
-        <a href="/">Meny</a>
-        <a href="/">Boka Event</a>
+        <a href="#about" onClick={() => setOpen(!open)}>Om oss</a>
+        <a href="#menu" onClick={() => setOpen(!open)}>Meny</a>
+        <a href="#contact" onClick={() => setOpen(!open)}>Boka Event</a>
         <div className="information">
           <p className="burger-contact">
             Kontakta oss <br></br> 0708-840717 <br></br>{" "}
