@@ -13,6 +13,15 @@ import mainImage from "./mainImage";
 // date
 import schedule from "./schedule";
 
+// Sandwich menu
+import sandwichMenu from "./sandwichMenu";
+
+// Salad menu
+import saladMenu from "./saladMenu";
+
+// Drink menu
+import drinkMenu from "./drinkMenu";
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -23,6 +32,9 @@ export default createSchema({
     eventInformation,
     mainImage,
     schedule,
+    sandwichMenu,
+    saladMenu,
+    drinkMenu,
     /* Your types here! */
   ]),
 });
