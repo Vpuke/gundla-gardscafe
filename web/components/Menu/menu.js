@@ -8,9 +8,9 @@ const StyledMenu = styled.nav`
   background: url("/menumobile-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
   height: 100vh;
-  width: 100vw;
+  //   width: 100vw;
   text-align: left;
   padding: 2rem;
   position: absolute;
