@@ -1,22 +1,22 @@
-/*
-import client from '../../client';
 
 const MenuItem = (props) => {
-  console.log(props);
+  // console.log(props);
+
   return (
     <div>
-      <h1>hej</h1>
-    </div>
-  )
-}
 
-MenuItem.getInitialProps = async function(context) {
-  // It's important to default the slug so that it doesn't return "undefined"
-  const { slug = "" } = context.query
-  return await client.fetch(`
-  *[_type == "eventInformation"][0]
-  `, { slug })
+      {Object.entries(props).map((item, key) => (
+        console.log(item[1].price),
+        console.log(item[1].description),
+        
+        <div key={key}>
+          <p>{item[1].description}</p>
+          <p>{item[1].price}</p>
+        </div>
+      ))}
+
+    </div>
+  );
 }
 
 export default MenuItem;
-*/
