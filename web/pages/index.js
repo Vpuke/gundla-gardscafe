@@ -3,7 +3,7 @@ import Menu from "../components/Menu/menu";
 import Burger from "../components/Hamburger/hamburger";
 import Footer from "../components/Footer/footer";
 import Section from "../components/Section/section";
-//import MenuItem from "../components/MenuItem/menuItem";
+import MenuItem from "../components/MenuItem/menuItem";
 
 import styled from "styled-components";
 
@@ -27,7 +27,7 @@ const Index = (props) => {
   const node = React.useRef();
   return (
     <div>
-      <StyledLandingPage>
+      <StyledLandingPage id="home">
         <div ref={node}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
@@ -35,10 +35,13 @@ const Index = (props) => {
         <img className="main-logo" src="/main-logo.svg"></img>
       </StyledLandingPage>
       <Section id="about" title="Om oss">
-        <p>blabla</p>
+        <div>
+        {/* <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgundlagardscafe&tabs=events&width=300&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" height="300"></iframe> */}
+        </div>
       </Section>
       <Section id="menu" title="Vår Meny">
-        <p></p>
+        {/* <MenuItem title={props.description} price={props.price}></MenuItem> */}
+        <MenuItem {...props}></MenuItem>
       </Section>
       <Section id="contact" title="Kontakta oss">
         <p>Formulär</p>

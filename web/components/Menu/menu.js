@@ -8,12 +8,12 @@ const StyledMenu = styled.nav`
   background: url("/menumobile-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   height: 100vh;
-  //   width: 100vw;
+  width: 100vw;
   text-align: left;
   padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
@@ -75,7 +75,7 @@ const Menu = ({ open, setOpen }) => {
     <nav>
       <StyledMenu open={open}>
         <img className="menu-logo" src="/menu-logo.svg"></img>
-        <a href="/">Hem</a>
+        <a href="#home" onClick={() => setOpen(!open)}>Hem</a>
         <a href="#about" onClick={() => setOpen(!open)}>Om oss</a>
         <a href="#menu" onClick={() => setOpen(!open)}>Meny</a>
         <a href="#contact" onClick={() => setOpen(!open)}>Boka Event</a>
