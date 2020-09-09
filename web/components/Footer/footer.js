@@ -27,7 +27,8 @@ const StyledFooter = styled.footer`
     margin: 15px 0 15px 0;
   }
 
-  p, a {
+  p,
+  a {
     margin: 0;
     font-size: 14px;
     font-weight: normal;
@@ -35,7 +36,7 @@ const StyledFooter = styled.footer`
   }
 
   div {
-    padding: 10px 0; 
+    padding: 10px 0;
   }
 `;
 
@@ -54,7 +55,9 @@ const Footer = () => {
             <div>
               <img src="../phone.svg" alt="phone-icon"></img>
               <p>Ring oss</p>
-              <p><a href="tel:070-884 07 17">070-884 07 17</a></p>
+              <p>
+                <a href="tel:070-884 07 17">070-884 07 17</a>
+              </p>
             </div>
             <div>
               <img src="../facebook.svg" alt="facebook-icon"></img>
@@ -72,7 +75,11 @@ const Footer = () => {
             <div>
               <img src="../email.svg" alt="email-icon"></img>
               <p>Maila</p>
-              <p><a href="mailto:gundlagardscafe@gmail.com">gundlagardscafe@gmail.com</a></p>
+              <p>
+                <a href="mailto:gundlagardscafe@gmail.com">
+                  gundlagardscafe@gmail.com
+                </a>
+              </p>
             </div>
             <div>
               <img src="../instagram.svg" alt="instagram-icon"></img>
@@ -81,7 +88,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div classaName="bottom-footer">
+        <div className="bottom-footer">
           <p>2020 @ Gundla Gårdscafé</p>
         </div>
       </StyledFooter>
