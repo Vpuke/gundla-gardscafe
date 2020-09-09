@@ -9,25 +9,31 @@ const StyledMenu = styled.div`
     padding: 0;
     margin: 0;
   }
+
+  .menuItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px 0 15px;
+  }
 `;
 const MenuItem = ({ menuItems }) => {
   return (
     <div>
       <StyledMenu>
         {menuItems.saladMenu.map((item, key) => (
-          <div key={key}>
+          <div key={key} className="menuItem">
             <p>{item.description}</p>
             <p>{item.price}</p>
           </div>
         ))}
         {menuItems.sandwichMenu.map((item, key) => (
-          <div key={key}>
+          <div key={key} className="menuItem">
             <p>{item.description}</p>
             <p>{item.price}</p>
           </div>
         ))}
         {menuItems.drinkMenu.map((item, key) => (
-          <div key={key}>
+          <div key={key} className="menuItem">
             <p>{item.description}</p>
             <p>{item.price}</p>
           </div>
