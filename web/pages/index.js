@@ -1,10 +1,10 @@
 import client from "../client";
+import groq from "groq";
 import Menu from "../components/Menu/menu";
 import Burger from "../components/Hamburger/hamburger";
 import Footer from "../components/Footer/footer";
 import Section from "../components/Section/section";
 import MenuItem from "../components/MenuItem/menuItem";
-
 import styled from "styled-components";
 
 const StyledLandingPage = styled.div`
@@ -21,8 +21,7 @@ const StyledLandingPage = styled.div`
   align-items: center;
 `;
 
-const Index = (props) => {
-  console.log(props);
+export default function Index({ menuItems }) {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
   return (
@@ -36,12 +35,12 @@ const Index = (props) => {
       </StyledLandingPage>
       <Section id="about" title="Om oss">
         <div>
-        {/* <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgundlagardscafe&tabs=events&width=300&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" height="300"></iframe> */}
+          {/* <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgundlagardscafe&tabs=events&width=300&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" height="300"></iframe> */}
         </div>
       </Section>
-      <Section id="menu" title="Vår Meny">
+      <Section id="menu" title="Meny">
         {/* <MenuItem title={props.description} price={props.price}></MenuItem> */}
-        <MenuItem {...props}></MenuItem>
+        <MenuItem menuItems={menuItems}></MenuItem>
       </Section>
       <Section id="contact" title="Kontakta oss">
         <p>Formulär</p>
@@ -49,14 +48,18 @@ const Index = (props) => {
       <Footer />
     </div>
   );
-};
-
-Index.getInitialProps = async function(context) {
-  // It's important to default the slug so that it doesn't return "undefined"
-  const { slug = "" } = context.query
-  return await client.fetch(`
-  *[_type == "drinkMenu"]
-  `, { slug })
 }
 
-export default Index;
+export async function getStaticProps() {
+  const query = groq`{
+    "drinkMenu": (*[_type == 'drinkMenu']),
+    "saladMenu": (*[_type == 'saladMenu']),
+    "sandwichMenu":(*[_type == 'sandwichMenu'])
+  }`;
+
+  const menuItems = await client.fetch(query);
+
+  return {
+    props: { menuItems: menuItems },
+  };
+}
