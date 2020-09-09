@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 const StyledSection = styled.section`
 height: 100vh;
+
+a {
+  font-size: 16px;
+}
 `;
 
 const Section = (props) => {

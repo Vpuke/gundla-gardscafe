@@ -18,11 +18,6 @@ const StyledFooter = styled.footer`
     align-items: center;
   }
 
-  .bottom-footer {
-    position: absolute;
-    bottom: 0;
-  }
-
   img {
     margin: 15px 0 15px 0;
   }
