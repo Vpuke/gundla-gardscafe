@@ -18,7 +18,7 @@ form {
 const Contact = () => {
     return (
         <StyledForm>
-            <h1>Formulär</h1>
+            <h1>Event/Catering</h1>
             <form action="https://formspree.io/mknqdqdb" method="POST">
                 <label htmlFor="name">Namn:</label>
                 <input type="text" id="name" name="name" />

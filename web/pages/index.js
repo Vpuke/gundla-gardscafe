@@ -1,5 +1,6 @@
 import client from "../client";
 import groq from "groq";
+import Link from 'next/link'
 import Menu from "../components/Menu/menu";
 import Burger from "../components/Hamburger/hamburger";
 import Footer from "../components/Footer/footer";
@@ -39,11 +40,13 @@ export default function Index({ menuItems }) {
         </div>
       </Section>
       <Section id="menu" title="Meny">
-        {/* <MenuItem title={props.description} price={props.price}></MenuItem> */}
         <MenuItem menuItems={menuItems}></MenuItem>
       </Section>
       <Section id="contact" title="Kontakta oss">
-        <p>Formulär</p>
+        <p>Vill du boka event eller catering?</p>
+        <Link href="/contact">
+          <a>Fyll i vårt fomulär!</a>
+        </Link>
       </Section>
       <Footer />
     </div>
