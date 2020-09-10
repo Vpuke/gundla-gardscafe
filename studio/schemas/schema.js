@@ -22,6 +22,11 @@ import foodMenu from "./foodMenu";
 // Drink menu
 import drinkMenu from "./drinkMenu";
 
+import footer from "./footer";
+import testMenu from "./testMenu";
+
+
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -35,6 +40,8 @@ export default createSchema({
     pastryMenu,
     foodMenu,
     drinkMenu,
+    footer,
+    testMenu,
     /* Your types here! */
   ]),
 });
