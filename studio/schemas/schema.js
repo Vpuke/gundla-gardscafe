@@ -14,10 +14,10 @@ import mainImage from "./mainImage";
 import schedule from "./schedule";
 
 // Sandwich menu
-import sandwichMenu from "./sandwichMenu";
+import pastryMenu from "./pastryMenu";
 
 // Salad menu
-import saladMenu from "./saladMenu";
+import foodMenu from "./foodMenu";
 
 // Drink menu
 import drinkMenu from "./drinkMenu";
@@ -32,8 +32,8 @@ export default createSchema({
     eventInformation,
     mainImage,
     schedule,
-    sandwichMenu,
-    saladMenu,
+    pastryMenu,
+    foodMenu,
     drinkMenu,
     /* Your types here! */
   ]),

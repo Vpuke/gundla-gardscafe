@@ -1,6 +1,6 @@
 import client from "../client";
 import groq from "groq";
-import Link from 'next/link'
+import Link from "next/link";
 import Menu from "../components/Menu/menu";
 import Burger from "../components/Hamburger/hamburger";
 import Footer from "../components/Footer/footer";
@@ -22,6 +22,13 @@ const StyledLandingPage = styled.div`
   align-items: center;
 `;
 
+const StyledMenuPage = styled.div`
+  #menu {
+    background-image: url("dark-background.png");
+    color: white;
+  }
+`;
+
 export default function Index({ menuItems }) {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
@@ -39,9 +46,11 @@ export default function Index({ menuItems }) {
           {/* <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgundlagardscafe&tabs=events&width=300&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" height="300"></iframe> */}
         </div>
       </Section>
-      <Section id="menu" title="Meny">
-        <MenuItem menuItems={menuItems}></MenuItem>
-      </Section>
+      <StyledMenuPage>
+        <Section id="menu" title="Meny">
+          <MenuItem menuItems={menuItems}></MenuItem>
+        </Section>
+      </StyledMenuPage>
       <Section id="contact" title="Kontakta oss">
         <p>Vill du boka event eller catering?</p>
         <Link href="/contact">
@@ -56,8 +65,8 @@ export default function Index({ menuItems }) {
 export async function getStaticProps() {
   const query = groq`{
     "drinkMenu": (*[_type == 'drinkMenu']),
-    "saladMenu": (*[_type == 'saladMenu']),
-    "sandwichMenu":(*[_type == 'sandwichMenu'])
+    "foodMenu": (*[_type == 'foodMenu']),
+    "pastryMenu":(*[_type == 'pastryMenu'])
   }`;
 
   const menuItems = await client.fetch(query);

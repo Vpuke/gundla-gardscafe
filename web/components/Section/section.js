@@ -1,20 +1,26 @@
 import styled from "styled-components";
 
 const StyledSection = styled.section`
-height: 100vh;
+  height: 100vh;
 
-a {
-  font-size: 16px;
-}
+  a {
+    font-size: 16px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    padding: 16px 0 0 0;
+  }
 `;
 
 const Section = (props) => {
-    return (
-      <StyledSection id={props.id}>
-          <h1>{props.title}</h1>
-          {props.children}
-      </StyledSection>
-    );
-  };
-  
-  export default Section;
+  return (
+    <StyledSection id={props.id}>
+      <h1>{props.title}</h1>
+      {props.children}
+    </StyledSection>
+  );
+};
+
+export default Section;
