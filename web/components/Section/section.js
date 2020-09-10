@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 const StyledSection = styled.section`
   height: 100vh;
+  background-image: url("dark-background.png");
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   a {
     font-size: 16px;

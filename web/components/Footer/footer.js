@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-  background: url("../footer.png");
+  background: url("../dark-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -84,7 +84,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="bottom-footer">
-          <p>2020 @ Gundla Gårdscafé</p>
+          <p>2020 &copy; Gundla Gårdscafé</p>
         </div>
       </StyledFooter>
     </footer>
