@@ -13,6 +13,8 @@ import aboutUs from "./aboutUs";
 import information from "./information";
 import openingHours from "./objects/openingHours";
 import address from "./objects/address";
+import event from "./event";
+
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -31,6 +33,7 @@ export default createSchema({
     address,
     openingHours,
     aboutUs,
+    event,
     /* Your types here! */
   ]),
 });
