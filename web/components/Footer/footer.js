@@ -45,7 +45,9 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const Footer = () => {
+const Footer = ({data}) => {
+  const information = data.information[0];
+  console.log(information.address);
   return (
     <footer>
       <StyledFooter>
@@ -54,8 +56,8 @@ const Footer = () => {
             <div>
               <img src="../watch.svg" alt="watch-icon"></img>
               <p>Öppettider</p>
-              <p>Lördag 11-19</p>
-              <p>Söndag 10-17</p>
+              <p>Lördag {information.openingHours.saturday}</p>
+              <p>Söndag {information.openingHours.sunday}</p>
             </div>
             <div>
               <img
@@ -63,9 +65,9 @@ const Footer = () => {
                 src="../phone.svg"
                 alt="phone-icon"
               ></img>
-              <p>Ring oss</p>
+              <p>RING</p>
               <p>
-                <a href="tel:070-884 07 17">070-884 07 17</a>
+              <a href={"tel:" + information.phone}>{information.phone}</a>
               </p>
             </div>
             <div>
@@ -74,16 +76,18 @@ const Footer = () => {
                 src="../facebook.svg"
                 alt="facebook-icon"
               ></img>
-              <p>Facebook</p>
-              <p>@gundlagardscafe</p>
+              <p>FACEBOOK</p>
+              <p>
+              <a href={information.facebookUrl}>@gundlagardscafe</a>
+              </p>
             </div>
           </div>
           <div className="right-side-footer">
             <div>
               <img src="../map-pin.svg" alt="map-pin-icon"></img>
               <p>Hitta till oss:</p>
-              <p>Gundla Mosse 32</p>
-              <p>412 76 Göteborg</p>
+              <p><a href="/">{information.address.address}</a></p>
+              <p>{information.address.postCode} {information.address.city}</p>
             </div>
             <div>
               <img
@@ -91,11 +95,9 @@ const Footer = () => {
                 src="../email.svg"
                 alt="email-icon"
               ></img>
-              <p>Maila</p>
+              <p>MAILA</p>
               <p>
-                <a href="mailto:gundlagardscafe@gmail.com">
-                  gundlagardscafe@gmail.com
-                </a>
+              <a href={"mailto:" + information.mail}>{information.mail}</a>
               </p>
             </div>
             <div>
@@ -104,8 +106,10 @@ const Footer = () => {
                 src="../instagram.svg"
                 alt="instagram-icon"
               ></img>
-              <p>Instagram</p>
-              <p>@gundlagardscafe</p>
+              <p>INSTAGRAM</p>
+              <p>
+              <a href={information.instagramUrl}>@gundlagardscafe</a>
+              </p>
             </div>
           </div>
         </div>
