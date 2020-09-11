@@ -48,7 +48,7 @@ export default function Index({ data }) {
           <a>Fyll i vårt fomulär!</a>
         </Link>
       </Section>
-      <Footer />
+      <Footer data={data}/>
     </div>
   );
 }
@@ -59,7 +59,7 @@ export async function getStaticProps() {
     "foodMenu": (*[_type == 'foodMenu']),
     "pastryMenu":(*[_type == 'pastryMenu']),
     "aboutUs": (*[_type == 'aboutUs']),
-
+    "information": (*[_type == 'information']),
   }`;
 
   const data = await client.fetch(query);
