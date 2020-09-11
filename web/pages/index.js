@@ -36,7 +36,7 @@ export default function Index({ data }) {
         </div>
         <img className="main-logo" src="/main-logo.svg"></img>
       </StyledLandingPage>
-      <Section id="about" title="Om oss">
+      <Section id="about" title="">
         <About data={data}></About>
       </Section>
       <Section id="menu" title="Meny">
