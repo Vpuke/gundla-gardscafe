@@ -3,26 +3,14 @@ import createSchema from "part:@sanity/base/schema-creator";
 
 // Then import schema types from any plugins that might expose them
 import schemaTypes from "all:part:@sanity/base/schema-type";
-
-// Eventinformation
 import eventInformation from "./eventInformation";
-
-// Images
 import mainImage from "./mainImage";
-
-// date
 import schedule from "./schedule";
-
-// Sandwich menu
 import pastryMenu from "./pastryMenu";
-
-// Salad menu
 import foodMenu from "./foodMenu";
-
-// Drink menu
 import drinkMenu from "./drinkMenu";
-
 import footer from "./footer";
+import aboutUs from "./aboutUs";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -38,6 +26,7 @@ export default createSchema({
     foodMenu,
     drinkMenu,
     footer,
+    aboutUs,
     /* Your types here! */
   ]),
 });

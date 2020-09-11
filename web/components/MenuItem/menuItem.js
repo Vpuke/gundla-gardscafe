@@ -44,12 +44,12 @@ const StyledMenu = styled.div`
     margin-top: 20px;
   }
 `;
-const MenuItem = ({ menuItems }) => {
+const MenuItem = ({ data }) => {
   return (
     <div>
       <StyledMenu>
         <img src="soup.svg" alt="Soup Icon" width="40px" height="40px" />
-        {menuItems.foodMenu.map((item, key) => (
+        {data.foodMenu.map((item, key) => (
           <div key={key} className="menuItem">
             <h2>{item.food}</h2>
             <p>{item.description}</p>
@@ -57,7 +57,7 @@ const MenuItem = ({ menuItems }) => {
           </div>
         ))}
         <img src="fika.svg" alt="Bun Icon" />
-        {menuItems.pastryMenu.map((item, key) => (
+        {data.pastryMenu.map((item, key) => (
           <div key={key} className="menuItem">
             <h2>{item.name}</h2>
             <p>{item.description}</p>
@@ -66,7 +66,7 @@ const MenuItem = ({ menuItems }) => {
         ))}
         <img src="drink.svg" alt="Drink icon" />
         <div className="drinkWrapper">
-          {menuItems.drinkMenu.map((item, key) => (
+          {data.drinkMenu.map((item, key) => (
             <div key={key} className="drinkItem">
               <h2>{item.description}</h2>
               <p>{item.price}:-</p>
