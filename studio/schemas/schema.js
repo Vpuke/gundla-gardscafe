@@ -9,8 +9,10 @@ import schedule from "./schedule";
 import pastryMenu from "./pastryMenu";
 import foodMenu from "./foodMenu";
 import drinkMenu from "./drinkMenu";
-import footer from "./footer";
 import aboutUs from "./aboutUs";
+import information from "./information";
+import openingHours from "./objects/openingHours";
+import address from "./objects/address";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,7 +27,9 @@ export default createSchema({
     pastryMenu,
     foodMenu,
     drinkMenu,
-    footer,
+    information,
+    address,
+    openingHours,
     aboutUs,
     /* Your types here! */
   ]),
