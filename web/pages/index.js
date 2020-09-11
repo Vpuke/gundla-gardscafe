@@ -6,7 +6,9 @@ import Burger from "../components/Hamburger/hamburger";
 import Footer from "../components/Footer/footer";
 import Section from "../components/Section/section";
 import MenuItem from "../components/MenuItem/menuItem";
+import About from "../components/About/About";
 import styled from "styled-components";
+import PortableText from "@sanity/block-content-to-react";
 
 const StyledLandingPage = styled.div`
   .main-logo {
@@ -22,12 +24,7 @@ const StyledLandingPage = styled.div`
   align-items: center;
 `;
 
-// const StyledMenuPage = styled.div`
-// background-image: url("dark-background.png");
-// color: white;
-// `;
-
-export default function Index({ menuItems }) {
+export default function Index({ data }) {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
   return (
@@ -40,10 +37,10 @@ export default function Index({ menuItems }) {
         <img className="main-logo" src="/main-logo.svg"></img>
       </StyledLandingPage>
       <Section id="about" title="Om oss">
-        <div></div>
+        <About data={data}></About>
       </Section>
       <Section id="menu" title="Meny">
-        <MenuItem menuItems={menuItems}></MenuItem>
+        <MenuItem data={data}></MenuItem>
       </Section>
       <Section id="contact" title="Kontakta oss">
         <p>Vill du boka event eller catering?</p>
@@ -60,12 +57,14 @@ export async function getStaticProps() {
   const query = groq`{
     "drinkMenu": (*[_type == 'drinkMenu']),
     "foodMenu": (*[_type == 'foodMenu']),
-    "pastryMenu":(*[_type == 'pastryMenu'])
+    "pastryMenu":(*[_type == 'pastryMenu']),
+    "aboutUs": (*[_type == 'aboutUs']),
+
   }`;
 
-  const menuItems = await client.fetch(query);
+  const data = await client.fetch(query);
 
   return {
-    props: { menuItems: menuItems },
+    props: { data: data },
   };
 }

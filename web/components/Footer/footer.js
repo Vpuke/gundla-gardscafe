@@ -33,6 +33,16 @@ const StyledFooter = styled.footer`
   div {
     padding: 10px 0;
   }
+
+  .resize-icon-big {
+    height: 54px;
+    width: 54px;
+  }
+
+  .resize-icon-small {
+    height: 48px;
+    width: 48px;
+  }
 `;
 
 const Footer = () => {
@@ -48,14 +58,22 @@ const Footer = () => {
               <p>Söndag 10-17</p>
             </div>
             <div>
-              <img src="../phone.svg" alt="phone-icon"></img>
+              <img
+                className="resize-icon-big"
+                src="../phone.svg"
+                alt="phone-icon"
+              ></img>
               <p>Ring oss</p>
               <p>
                 <a href="tel:070-884 07 17">070-884 07 17</a>
               </p>
             </div>
             <div>
-              <img src="../facebook.svg" alt="facebook-icon"></img>
+              <img
+                className="resize-icon-small"
+                src="../facebook.svg"
+                alt="facebook-icon"
+              ></img>
               <p>Facebook</p>
               <p>@gundlagardscafe</p>
             </div>
@@ -68,7 +86,11 @@ const Footer = () => {
               <p>412 76 Göteborg</p>
             </div>
             <div>
-              <img src="../email.svg" alt="email-icon"></img>
+              <img
+                className="resize-icon-big"
+                src="../email.svg"
+                alt="email-icon"
+              ></img>
               <p>Maila</p>
               <p>
                 <a href="mailto:gundlagardscafe@gmail.com">
@@ -77,7 +99,11 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <img src="../instagram.svg" alt="instagram-icon"></img>
+              <img
+                className="resize-icon-small"
+                src="../instagram.svg"
+                alt="instagram-icon"
+              ></img>
               <p>Instagram</p>
               <p>@gundlagardscafe</p>
             </div>
