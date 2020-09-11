@@ -7,6 +7,7 @@ import Footer from "../components/Footer/footer";
 import Section from "../components/Section/section";
 import MenuItem from "../components/MenuItem/menuItem";
 import About from "../components/About/About";
+import Event from "../components/Event/event";
 import styled from "styled-components";
 import PortableText from "@sanity/block-content-to-react";
 
@@ -42,11 +43,8 @@ export default function Index({ data }) {
       <Section id="menu" title="Meny">
         <MenuItem data={data}></MenuItem>
       </Section>
-      <Section id="contact" title="Kontakta oss">
-        <p>Vill du boka event eller catering?</p>
-        <Link href="/contact">
-          <a>Fyll i vårt fomulär!</a>
-        </Link>
+      <Section id="contact" title="Evenemang">
+        <Event data={data} />
       </Section>
       <Footer data={data}/>
     </div>
@@ -60,6 +58,7 @@ export async function getStaticProps() {
     "pastryMenu":(*[_type == 'pastryMenu']),
     "aboutUs": (*[_type == 'aboutUs']),
     "information": (*[_type == 'information']),
+    "event": (*[_type == 'event']),
   }`;
 
   const data = await client.fetch(query);
