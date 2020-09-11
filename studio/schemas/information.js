@@ -1,7 +1,7 @@
 export default {
-    name: "footer",
+    name: "information",
     type: "document",
-    title: "Footer",
+    title: "Information",
     fields: [
         {
         name: "facebookUrl",
@@ -23,6 +23,16 @@ export default {
         name: "mail",
         type: "string",
         title: "Emailadress",
+        },
+        {
+        name: "address",
+        type: "address",
+        title: "Adress",
+        },
+        {
+        name: "openingHours",
+        type: "openingHours",
+        title: "Öppettider",
         },
     ],
 };
