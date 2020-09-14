@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledFooter = styled.footer`
   background: url("../dark-background.png");
@@ -45,7 +46,7 @@ const StyledFooter = styled.footer`
   }
 `;
 
-const Footer = ({data}) => {
+const Footer = ({ data }) => {
   const information = data.information[0];
   console.log(information.address);
   return (
@@ -67,7 +68,7 @@ const Footer = ({data}) => {
               ></img>
               <p>RING</p>
               <p>
-              <a href={"tel:" + information.phone}>{information.phone}</a>
+                <a href={"tel:" + information.phone}>{information.phone}</a>
               </p>
             </div>
             <div>
@@ -78,7 +79,7 @@ const Footer = ({data}) => {
               ></img>
               <p>FACEBOOK</p>
               <p>
-              <a href={information.facebookUrl}>@gundlagardscafe</a>
+                <a href={information.facebookUrl}>@gundlagardscafe</a>
               </p>
             </div>
           </div>
@@ -86,8 +87,12 @@ const Footer = ({data}) => {
             <div>
               <img src="../map-pin.svg" alt="map-pin-icon"></img>
               <p>Hitta till oss:</p>
-              <p><a href="/">{information.address.address}</a></p>
-              <p>{information.address.postCode} {information.address.city}</p>
+              <p>
+                <Link href="/location">{information.address.address}</Link>
+              </p>
+              <p>
+                {information.address.postCode} {information.address.city}
+              </p>
             </div>
             <div>
               <img
@@ -97,7 +102,7 @@ const Footer = ({data}) => {
               ></img>
               <p>MAILA</p>
               <p>
-              <a href={"mailto:" + information.mail}>{information.mail}</a>
+                <a href={"mailto:" + information.mail}>{information.mail}</a>
               </p>
             </div>
             <div>
@@ -108,7 +113,7 @@ const Footer = ({data}) => {
               ></img>
               <p>INSTAGRAM</p>
               <p>
-              <a href={information.instagramUrl}>@gundlagardscafe</a>
+                <a href={information.instagramUrl}>@gundlagardscafe</a>
               </p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 // import React, { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -39,13 +40,13 @@ const StyledMenu = styled.nav`
 
   .burger-contact {
     position: absolute;
-    bottom: -9rem;
+    bottom: -7rem;
     left: 1rem;
   }
 
   .burger-opening-hours {
     position: absolute;
-    bottom: -9rem;
+    bottom: -7rem;
     right: 1rem;
   }
 
@@ -75,10 +76,21 @@ const Menu = ({ open, setOpen }) => {
     <nav>
       <StyledMenu open={open}>
         <img className="menu-logo" src="/menu-logo.svg"></img>
-        <a href="#home" onClick={() => setOpen(!open)}>Hem</a>
-        <a href="#about" onClick={() => setOpen(!open)}>Om oss</a>
-        <a href="#menu" onClick={() => setOpen(!open)}>Meny</a>
-        <a href="#contact" onClick={() => setOpen(!open)}>Boka Event</a>
+        <a href="#home" onClick={() => setOpen(!open)}>
+          Hem
+        </a>
+        <a href="#about" onClick={() => setOpen(!open)}>
+          Om oss
+        </a>
+        <a href="#menu" onClick={() => setOpen(!open)}>
+          Meny
+        </a>
+        <a href="#contact" onClick={() => setOpen(!open)}>
+          Boka Event
+        </a>
+        <Link href="/location" onClick={() => setOpen(!open)}>
+          Hitta hit
+        </Link>
         <div className="information">
           <p className="burger-contact">
             Kontakta oss <br></br> 0708-840717 <br></br>{" "}

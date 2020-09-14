@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import PortableText from "@sanity/block-content-to-react";
 
+const StyledAbout = styled.div`
+  display: flex;
+  justify-content: center;
+
+  padding: 0 20px 0 20px;
+`;
+
 const About = ({ data }) => {
   const serializers = {
     types: {
@@ -13,16 +20,18 @@ const About = ({ data }) => {
   };
 
   return (
-    <div>
-      <PortableText
-        blocks={data.aboutUs[0].headLine}
-        serializers={serializers}
-      />
-      <PortableText
-        blocks={data.aboutUs[0].description}
-        serializers={serializers}
-      />
-    </div>
+    <StyledAbout>
+      <div>
+        <PortableText
+          blocks={data.aboutUs[0].headLine}
+          serializers={serializers}
+        />
+        <PortableText
+          blocks={data.aboutUs[0].description}
+          serializers={serializers}
+        />
+      </div>
+    </StyledAbout>
   );
 };
 

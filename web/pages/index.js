@@ -9,7 +9,7 @@ import MenuItem from "../components/MenuItem/menuItem";
 import About from "../components/About/About";
 import Event from "../components/Event/event";
 import styled from "styled-components";
-import PortableText from "@sanity/block-content-to-react";
+// import PortableText from "@sanity/block-content-to-react";
 
 const StyledLandingPage = styled.div`
   .main-logo {
@@ -46,7 +46,7 @@ export default function Index({ data }) {
       <Section id="contact" title="Evenemang">
         <Event data={data} />
       </Section>
-      <Footer data={data}/>
+      <Footer data={data} />
     </div>
   );
 }
