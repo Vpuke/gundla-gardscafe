@@ -10,8 +10,8 @@ const StyledList = styled.ul`
   `;
 
 const Event = ({ data }) => {
+  //console.log(data);
     const event = data.event[0];
-    console.log(event);
 
   return (
     <div>
