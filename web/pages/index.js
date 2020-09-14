@@ -7,14 +7,16 @@ import Section from "../components/Section/section";
 import MenuItem from "../components/MenuItem/menuItem";
 import About from "../components/About/About";
 import Event from "../components/Event/event";
+import BackgroundVideo from "../components/BackgroundVideo/backgroundVideo";
 import InstagramFeed from "../components/InstagramFeed/instagramFeed";
 import styled from "styled-components";
 
 // import PortableText from "@sanity/block-content-to-react";
 
 const StyledLandingPage = styled.div`
-  background-image: url("hero-image.png");
+  // background-image: url("hero-image.png");
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -30,8 +32,9 @@ export default function Index({ data, instagram }) {
   return (
     <div>
       <StyledLandingPage id="home">
+        <BackgroundVideo />
         <Navigation />
-        <img className="main-logo" src="/main-logo.svg"></img>
+        {/* <img className="main-logo" src="/main-logo.svg"></img> */}
       </StyledLandingPage>
       <Section id="about" title="">
         <About data={data}></About>
