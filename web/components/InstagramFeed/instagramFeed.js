@@ -26,7 +26,9 @@ const InstagramFeed = (props) => {
     <StyledImage>
       {images.map((item, i) => (
         <div className="instagramImgWrapper" key={i}>
-          <img src={item.node.display_url} key={i}></img>
+          <a href="https://www.instagram.com/gundlagardscafe/">
+            <img src={item.node.display_url} key={i}></img>
+          </a>
         </div>
       ))}
     </StyledImage>

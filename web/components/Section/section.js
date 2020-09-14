@@ -14,13 +14,16 @@ const StyledSection = styled.section`
   h1 {
     text-align: center;
     margin: 0;
-    padding: 16px 0 0 0;
+    padding: 20px 0 0 0;
   }
 `;
 
 const Section = (props) => {
   return (
-    <StyledSection id={props.id}>
+    <StyledSection
+      className={props.id === "menu" ? "menu-background" : " "}
+      id={props.id}
+    >
       <h1>{props.title}</h1>
       {props.children}
     </StyledSection>
