@@ -8,6 +8,7 @@ import Section from "../components/Section/section";
 import MenuItem from "../components/MenuItem/menuItem";
 import About from "../components/About/About";
 import Event from "../components/Event/event";
+import InstagramFeed from "../components/InstagramFeed/instagramFeed";
 import styled from "styled-components";
 // import PortableText from "@sanity/block-content-to-react";
 
@@ -25,7 +26,7 @@ const StyledLandingPage = styled.div`
   align-items: center;
 `;
 
-export default function Index({ data }) {
+export default function Index({ data, instagram }) {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
   return (
@@ -39,6 +40,7 @@ export default function Index({ data }) {
       </StyledLandingPage>
       <Section id="about" title="">
         <About data={data}></About>
+        <InstagramFeed instagramData={instagram} />
       </Section>
       <Section id="menu" title="Meny">
         <MenuItem data={data}></MenuItem>
@@ -63,7 +65,12 @@ export async function getStaticProps() {
 
   const data = await client.fetch(query);
 
+  const resInsta = await fetch(
+    "https://www.instagram.com/gundlagardscafe/?__a=1"
+  );
+  const InstagramJson = await resInsta.json();
+
   return {
-    props: { data: data },
+    props: { data: data, instagram: InstagramJson },
   };
 }
