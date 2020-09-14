@@ -86,7 +86,7 @@ const Menu = ({ open, setOpen }) => {
           Meny
         </a>
         <a href="/#contact" onClick={() => setOpen(!open)}>
-          Evenemang
+          Boka Event
         </a>
         <Link href="/location">
           <a>Hitta hit</a>
