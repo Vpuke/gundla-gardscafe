@@ -1,8 +1,7 @@
 import client from "../client";
 import groq from "groq";
 import Link from "next/link";
-import Menu from "../components/Menu/menu";
-import Burger from "../components/Hamburger/hamburger";
+import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
 import Section from "../components/Section/section";
 import MenuItem from "../components/MenuItem/menuItem";
@@ -26,15 +25,10 @@ const StyledLandingPage = styled.div`
 `;
 
 export default function Index({ data }) {
-  const [open, setOpen] = React.useState(false);
-  const node = React.useRef();
   return (
     <div>
       <StyledLandingPage id="home">
-        <div ref={node}>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-        </div>
+        <Navigation />
         <img className="main-logo" src="/main-logo.svg"></img>
       </StyledLandingPage>
       <Section id="about" title="">

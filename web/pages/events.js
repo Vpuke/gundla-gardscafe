@@ -1,29 +1,51 @@
 import styled from 'styled-components';
 import groq from "groq";
 import client from "../client";
+import Navigation from "../components/Navigation/navigation";
 
 const StyledEvent = styled.div`
   background: #2b2b2b;
-  width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: white;
+  padding: 20px 20px;
+
+  h1 {
+      margin: 0;
+      padding: 0 0 24px 0;
+      text-align: center;
+      font-size: 36px;
+  }
+
+  h2 {
+    font-family: "IBM Plex Sans";
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .activities {
+      padding-bottom: 24px;
+  }
+
+  .activities p, .info p {
+      margin: 0;
+      padding-top: 4px;
+      font-size: 16px;
+}
 `;
 
 export default function Events({ data }) {
-    console.log(data.eventInformation)
     return (
         <StyledEvent>
+            <Navigation />
             <h1>Våra aktiviteter</h1>
             {data.eventInformation.map((item, key) => (
-            <div key={key}>
+            <div key={key} className="activities">
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
             </div>
         ))}
-        <div>
+        <div className="info">
             <h2>Program för sommaren 2021 kommer i maj.</h2>
             <p>Kontakta oss för biljetter.</p>
         </div>
