@@ -1,30 +1,18 @@
 export default {
   name: "eventInformation",
   type: "document",
-  title: "Event information",
+  title: "Aktiviteter",
   fields: [
     {
-      name: "name",
+      name: "title",
       type: "string",
-      title: "Event name",
+      title: "Rubrik",
     },
     {
       name: "description",
       type: "text",
-      title: "Description",
-      description: "Describe your event (Seo purposes)",
-    },
-    {
-      name: "image",
-      type: "mainImage",
-      title: "Event Image",
-      description: "The highest resolution",
-    },
-    {
-      name: "schedule",
-      type: "schedule",
-      title: "Pick date and time",
-      description: "please choose date and time",
+      title: "Beskrivning",
+      description: "Beskriv aktiviteten.",
     },
   ],
 };
