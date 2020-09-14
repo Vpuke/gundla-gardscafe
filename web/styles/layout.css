@@ -23,8 +23,13 @@ h2 {
   padding: 0;
 }
 
-p, li {
+p,
+li {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
+}
+
+.menu-background {
+  background-image: url("/menu-bg.png") !important;
 }

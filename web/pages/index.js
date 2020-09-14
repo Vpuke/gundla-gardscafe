@@ -9,20 +9,21 @@ import About from "../components/About/About";
 import Event from "../components/Event/event";
 import InstagramFeed from "../components/InstagramFeed/instagramFeed";
 import styled from "styled-components";
+
 // import PortableText from "@sanity/block-content-to-react";
 
 const StyledLandingPage = styled.div`
-  .main-logo {
-    height: 260px;
-    width: 264px;
-  }
-
   background-image: url("hero-image.png");
   height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  .main-logo {
+    height: 260px;
+    width: 264px;
+  }
 `;
 
 export default function Index({ data, instagram }) {
