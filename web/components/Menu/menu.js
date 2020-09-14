@@ -76,20 +76,20 @@ const Menu = ({ open, setOpen }) => {
     <nav>
       <StyledMenu open={open}>
         <img className="menu-logo" src="/menu-logo.svg"></img>
-        <a href="#home" onClick={() => setOpen(!open)}>
+        <a href="/#home" onClick={() => setOpen(!open)}>
           Hem
         </a>
-        <a href="#about" onClick={() => setOpen(!open)}>
+        <a href="/#about" onClick={() => setOpen(!open)}>
           Om oss
         </a>
-        <a href="#menu" onClick={() => setOpen(!open)}>
+        <a href="/#menu" onClick={() => setOpen(!open)}>
           Meny
         </a>
-        <a href="#contact" onClick={() => setOpen(!open)}>
-          Boka Event
+        <a href="/#contact" onClick={() => setOpen(!open)}>
+          Evenemang
         </a>
-        <Link href="/location" onClick={() => setOpen(!open)}>
-          Hitta hit
+        <Link href="/location">
+          <a>Hitta hit</a>
         </Link>
         <div className="information">
           <p className="burger-contact">
