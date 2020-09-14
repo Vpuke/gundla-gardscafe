@@ -25,7 +25,7 @@ const StyledLandingPage = styled.div`
   align-items: center;
 `;
 
-export default function Index({ data }) {
+export default function Index({ data, instagram }) {
   return (
     <div>
       <StyledLandingPage id="home">
