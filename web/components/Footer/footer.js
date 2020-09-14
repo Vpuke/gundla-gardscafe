@@ -88,7 +88,7 @@ const Footer = ({ data }) => {
               <img src="../map-pin.svg" alt="map-pin-icon"></img>
               <p>Hitta till oss:</p>
               <p>
-                <Link href="/location">{information.address.address}</Link>
+                <Link href="/location"><a>{information.address.address}</a></Link>
               </p>
               <p>
                 {information.address.postCode} {information.address.city}
