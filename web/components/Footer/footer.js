@@ -48,7 +48,6 @@ const StyledFooter = styled.footer`
 
 const Footer = ({ data }) => {
   const information = data.information[0];
-  console.log(information.address);
   return (
     <footer>
       <StyledFooter>
@@ -88,7 +87,9 @@ const Footer = ({ data }) => {
               <img src="../map-pin.svg" alt="map-pin-icon"></img>
               <p>Hitta till oss:</p>
               <p>
-                <Link href="/location"><a>{information.address.address}</a></Link>
+                <Link href="/location">
+                  <a>{information.address.address}</a>
+                </Link>
               </p>
               <p>
                 {information.address.postCode} {information.address.city}
