@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from 'styled-components';
 
 const StyledForm = styled.div`
@@ -70,10 +71,31 @@ input[type=text], textarea {
 `;
 
 const Contact = () => {
+    const [status, setStatus] = useState("");
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        const req = new XMLHttpRequest();
+        req.open(form.method, form.action);
+        req.setRequestHeader("Accept", "application/json");
+        req.onreadystatechange = () => {
+        if (req.readyState !== XMLHttpRequest.DONE) return;
+        if (req.status === 200) {
+            form.reset();
+            setStatus("SUCCESS");
+        } else {
+            setStatus("ERROR");
+        }
+        };
+        req.send(data);
+  };
+
     return (
         <StyledForm>
             <h1>Boka event/catering</h1>
-            <form action="https://formspree.io/mknqdqdb" method="POST">
+            <form action="https://formspree.io/mknqdqdb" method="POST" onSubmit={sendEmail}>        
                 <div className="radio-buttons">
                     <p>Vänligen välj ett alternativ:</p>
                     <div>
@@ -85,17 +107,18 @@ const Contact = () => {
                         <label htmlFor="catering">Catering</label>
                     </div>
                 </div>
-
                 <label htmlFor="name">Ditt namn</label>
                 <input type="text" id="name" name="name" placeholder="Skriv ditt namn här" required/>
-
                 <label htmlFor="email">Din mailadress</label>
                 <input type="text" id="email" name="_replyto" placeholder="Skriv din mailadress här" required/>
-
                 <label htmlFor="message">Ditt meddelande</label>
                 <textarea name="message" id="message" rows="6" cols="50" placeholder="Skriv ditt meddelande här" required></textarea>
-                
-                <button type="submit">Skicka förfrågan</button>
+                {status === "SUCCESS" ? (
+                    <p>Din förfrågan är skickad.</p>
+                    ) : (
+                        <button type="submit">Skicka förfrågan</button>
+                    )}
+                    {status === "ERROR" && <p>Något gick fel. Försök igen.</p>}
             </form>
         </StyledForm>
     );
