@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../MediaQueries/mediaQueries";
 
 const StyledMenu = styled.div`
   display: flex;
@@ -42,6 +43,9 @@ const StyledMenu = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 20px;
+  }
+
+  @media ${device.laptop} {
   }
 `;
 const MenuItem = ({ data }) => {

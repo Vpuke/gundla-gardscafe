@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../MediaQueries/mediaQueries";
 
 const StyledImage = styled.div`
   width: 100vw;
@@ -14,6 +15,14 @@ const StyledImage = styled.div`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media ${device.laptop}{
+    .instagramImgWrapper{
+        margin-top:50px;
+        width: 250px;
+        height:250px;
+    }
   }
 `;
 
