@@ -14,6 +14,13 @@ h1 {
     font-weight: 400;
 }
 
+h3 {
+    font-family: IBM Plex Sans;
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0;
+}
+
 form {
     width: 90%;
     display: flex;
@@ -68,10 +75,54 @@ input[type=text], textarea {
     cursor: pointer;
     padding: 6px 0 6px 10px;
   }
+
+  .btn {
+    position: absolute;
+    bottom: 60px;
+    border-left: 2px solid #fff;
+    color: #fff;
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 30px;
+    cursor: pointer;
+    padding: 6px 0 6px 10px;
+    text-decoration: none;
+  }
+
+  .success {
+      display: none;
+      width: 90%;
+  }
+  
+  .success-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .show {
+      display: flex;
+      flex-direction: column;   
+  }
+
+  .hide {
+    display: none;
+  }
+
+  img {
+      margin: 70px 0 32px 0;
+      width: 132px;
+  }
 `;
 
 const Contact = () => {
     const [status, setStatus] = useState("");
+    const test = document.querySelector(".success");
+    const contactForm =  document.querySelector("form");
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -90,7 +141,12 @@ const Contact = () => {
         }
         };
         req.send(data);
-  };
+    };
+    
+    if (status === "SUCCESS") {
+        test.classList.add("show");
+        contactForm.classList.add("hide");
+    }
 
     return (
         <StyledForm>
@@ -113,13 +169,17 @@ const Contact = () => {
                 <input type="text" id="email" name="_replyto" placeholder="Skriv din mailadress här" required/>
                 <label htmlFor="message">Ditt meddelande</label>
                 <textarea name="message" id="message" rows="6" cols="50" placeholder="Skriv ditt meddelande här" required></textarea>
-                {status === "SUCCESS" ? (
-                    <p>Din förfrågan är skickad.</p>
-                    ) : (
-                        <button type="submit">Skicka förfrågan</button>
-                    )}
-                    {status === "ERROR" && <p>Något gick fel. Försök igen.</p>}
+                <button type="submit">Skicka förfrågan</button>
+                {status === "ERROR" && <p>Något gick fel. Försök igen.</p>}
             </form>
+            <div className="success">
+                <div className="success-text">
+                    <img src="../success.svg" alt="success-icon"></img>
+                    <h3>Din förfrågan har skickats!</h3>
+                    <p>Vi kommer att kontakta dig så snart vi kan, vanligtvis inom 24 timmar.</p>
+                </div>
+                <a className="btn" href="/">Tillbaka till startsidan</a>
+            </div>
         </StyledForm>
     );
   };
