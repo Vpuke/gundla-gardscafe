@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { device } from "../MediaQueries/mediaQueries";
 
 const StyledWrapper = styled.div`
 
@@ -93,6 +94,22 @@ small {
   font-size: 18px;
   margin: 6px 0;
 }
+
+@media ${device.laptop} {
+  .container {
+    width: 33%;
+    padding: 0 100px;
+  }
+
+  .images {
+    position: absolute;
+    right: 0;
+  }
+
+  .image-container {
+    width: 400px;
+  }
+}
 `;
 
 
@@ -117,7 +134,10 @@ const Event = ({ data }) => {
         </Link>
         <div className="images">
           <div className="image-container">
-            <img src="/yoga-mobile.png" alt="Outside yoga class"></img>
+            <picture>
+              <source srcSet="/yoga.png" media="(min-width: 1024px)" />
+              <img src="/yoga-mobile.png" alt="Outdoor yoga class" />
+            </picture>
           </div>
         </div>
         <div className="contact">
