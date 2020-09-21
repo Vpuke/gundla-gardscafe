@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../MediaQueries/mediaQueries";
 
 const StyledSection = styled.section`
   height: 100vh;
@@ -15,6 +16,12 @@ const StyledSection = styled.section`
     text-align: center;
     margin: 0;
     padding: 20px 0 0 0;
+  }
+
+  @media ${device.laptop} {
+    h1 {
+      font-size: 64px;
+    }
   }
 `;
 

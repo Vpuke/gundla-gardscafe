@@ -17,6 +17,14 @@ const StyledImage = styled.div`
     height: 100%;
   }
 
+  @media ${device.tablet}{
+    .instagramImgWrapper{
+      margin-top: 100px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
   @media ${device.laptop}{
     .instagramImgWrapper{
         margin-top:50px;
