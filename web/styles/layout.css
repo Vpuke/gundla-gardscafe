@@ -33,3 +33,7 @@ li {
 .menu-background {
   background-image: url("/menu-bg.png") !important;
 }
+
+#contact {
+  background-image: url("/event-bg-mobile.png") !important;
+}

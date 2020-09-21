@@ -44,7 +44,7 @@ export default function Index({ data, instagram }) {
       <Section id="menu" title="Meny">
         <MenuItem data={data}></MenuItem>
       </Section>
-      <Section id="contact" title="Evenemang">
+      <Section id="contact" title="Event">
         <Event data={data} />
       </Section>
       <Footer data={data} />

@@ -9,16 +9,18 @@ const StyledWrapper = styled.div`
 
 p {
   padding: 0 5px;
+  font-size: 16px;
 }
 
 ul {
   padding: 5px;
-  background: rgba(196, 196, 196, 0.2);
+  background: rgba(54, 54, 54, 0.8);
   border-radius: 5px;
 }
 
 li {
   list-style:none;
+  font-size: 16px;
 }
 
 a {
@@ -47,7 +49,6 @@ a {
 }
 
 .image-container {
- 
   width: 268px;
 }
 
@@ -61,13 +62,17 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 24px 0 20px 0;
+  margin: 24px 10px 20px 10px;
 }
 
 .form-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form-btn img {
+  width: 40px;
 }
 
 small {
@@ -86,6 +91,7 @@ small {
 
 .contact a {
   font-size: 18px;
+  margin: 6px 0;
 }
 `;
 
@@ -111,7 +117,7 @@ const Event = ({ data }) => {
         </Link>
         <div className="images">
           <div className="image-container">
-            <img src="/yoga-mobile.png"></img>
+            <img src="/yoga-mobile.png" alt="Outside yoga class"></img>
           </div>
         </div>
         <div className="contact">
@@ -119,12 +125,14 @@ const Event = ({ data }) => {
           <p>Tryck här nedan för att komma till våra formulär.</p>
           <div className="forms">
             <div className="form-btn">
+              <img src="../calendar.svg" alt="calendar-icon"></img>
               <Link href="/contact">
                 <a>Boka event</a>
               </Link>
               <small>Ha ditt evenemang hos oss</small>
             </div>
             <div className="form-btn">
+              <img src="../catering.svg" alt="catering-icon"></img>
               <Link href="/contact">
                 <a>Boka catering</a>
               </Link>
