@@ -16,7 +16,7 @@ const StyledMenu = styled.div`
 
   p {
     padding: 0;
-    margin: 0 5px 0 0;
+    margin: 2px 5px 0 0;
   }
 
   h2 {
