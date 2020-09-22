@@ -29,7 +29,21 @@ const StyledLandingPage = styled.div`
   }
 `;
 
-export default function Index({ data, instagram }) {
+export default function Index({ data }) {
+  const [instaData, setInstaData] = React.useState("");
+
+  React.useEffect(() => {
+    fetch("https://www.instagram.com/gundlagardscafe/?__a=1")
+      .then((resp) => resp.json())
+      .then((json) => setInstaData(json));
+  }, [0]);
+
+  let instaGrid = [];
+
+  if (instaData) {
+    instaGrid = instaData.graphql.user.edge_owner_to_timeline_media.edges;
+  }
+
   return (
     <div>
       <StyledLandingPage id="home">
@@ -39,7 +53,7 @@ export default function Index({ data, instagram }) {
       </StyledLandingPage>
       <Section id="about" title="">
         <About data={data}></About>
-        <InstagramFeed instagramData={instagram} />
+        <InstagramFeed instagramData={instaGrid} />
       </Section>
       <Section id="menu" title="Meny">
         <MenuItem data={data}></MenuItem>
@@ -64,12 +78,7 @@ export async function getStaticProps() {
 
   const data = await client.fetch(query);
 
-  const resInsta = await client.fetch(
-    "https://www.instagram.com/gundlagardscafe/?__a=1"
-  );
-  const InstagramJson = await resInsta.json();
-
   return {
-    props: { data: data, instagram: InstagramJson },
+    props: { data: data },
   };
 }

@@ -36,13 +36,11 @@ const StyledImage = styled.div`
 `;
 
 const InstagramFeed = (props) => {
-  const url =
-    props.instagramData.graphql.user.edge_owner_to_timeline_media.edges;
-  const images = url.slice(0, 4);
+  const url = props.instagramData.slice(0, 4);
 
   return (
     <StyledImage>
-      {images.map((item, i) => (
+      {url.map((item, i) => (
         <div className="instagramImgWrapper" key={i}>
           <a href="https://www.instagram.com/gundlagardscafe/">
             <img src={item.node.display_url} key={i}></img>
