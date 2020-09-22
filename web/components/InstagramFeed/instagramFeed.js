@@ -10,7 +10,7 @@ const StyledImage = styled.div`
   .instagramImgWrapper {
     width: 170px;
     height: 170px;
-    padding 10px 0 10px 10px;
+    padding 8px 8px 8px 8px;
   }
   img {
     width: 100%;
