@@ -39,7 +39,7 @@ export default function Index({ data, instagram }) {
       </StyledLandingPage>
       <Section id="about" title="">
         <About data={data}></About>
-        <InstagramFeed instagramData={instagram} />
+        {/* <InstagramFeed instagramData={instagram} /> */}
       </Section>
       <Section id="menu" title="Meny">
         <MenuItem data={data}></MenuItem>
@@ -64,12 +64,17 @@ export async function getStaticProps() {
 
   const data = await client.fetch(query);
 
-  const resInsta = await fetch(
-    "https://www.instagram.com/gundlagardscafe/?__a=1"
-  );
-  const InstagramJson = await resInsta.json();
+  // const resInsta = await fetch(
+  //   "https://www.instagram.com/gundlagardscafe/?__a=1"
+  // );
+  // const InstagramJson = await resInsta.json();
 
   return {
-    props: { data: data, instagram: InstagramJson },
+    props: { data: data },
   };
 }
+
+// return {
+//   props: { data: data, instagram: InstagramJson },
+// };
+// }
