@@ -3,9 +3,10 @@ import Link from "next/link";
 import { device } from "../MediaQueries/mediaQueries";
 
 const StyledWrapper = styled.div`
-
 .container {
   padding: 0 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -40,7 +41,7 @@ a {
   text-decoration: none;
 }
 
-.images {
+.image-wrapper {
   widht: 100%;
   margin: 20px 0;
   overflow: hidden;
@@ -50,7 +51,7 @@ a {
 }
 
 .image-container {
-  width: 268px;
+  max-width: 268px;
 }
 
 img {
@@ -95,21 +96,57 @@ small {
   margin: 6px 0;
 }
 
-@media ${device.laptop} {
+@media ${device.tablet} {
   .container {
-    width: 33%;
     padding: 0 100px;
+    flex-direction:row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .event-list {
+    width: 40%;
+  }
+}
+
+@media ${device.laptop} {
+  padding-top: 42px;
+
+  .container {
+    padding: 0 200px;
   }
 
-  .images {
-    position: absolute;
-    right: 0;
+  ul {
+    background: rgba(196, 196, 196, 0.2);
+    padding: 25px;
+  }
+
+  .image-wrapper {
+    width: 40%;
+    margin: 0;
   }
 
   .image-container {
-    width: 400px;
+    max-width: 100%;
+  }
+
+  .forms {
+    margin-top: 32px;
+  }
+
+  .form-btn:last-child {
+    padding-left: 100px;
+  }
+
+  .form-btn img {
+    width: 50px;
   }
 }
+
+@media screen and (min-width: 1350px) {
+  .contact {
+     margin-top: -100px;
+     }
+  }
 `;
 
 
@@ -119,20 +156,22 @@ const Event = ({ data }) => {
   return (
     <StyledWrapper>
       <div className="container">
-        <p>{event.description}</p>
-        <ul>
-            <li>Måndag: {event.monday}</li>
-            <li>Tisdag: {event.tuesday}</li>
-            <li>Onsdag: {event.wednesday}</li>
-            <li>Torsdag: {event.thursday}</li>
-            <li>Fredag: {event.friday}</li>
-            <li>Lördag: {event.saturday}</li>
-            <li>Söndag: {event.sunday}</li>
-        </ul>
-        <Link href="/events">
-            <a className="btn">Mer info om våra aktiviteter</a>
-        </Link>
-        <div className="images">
+        <div className="event-list">
+          <p>{event.description}</p>
+          <ul>
+              <li>Måndag: {event.monday}</li>
+              <li>Tisdag: {event.tuesday}</li>
+              <li>Onsdag: {event.wednesday}</li>
+              <li>Torsdag: {event.thursday}</li>
+              <li>Fredag: {event.friday}</li>
+              <li>Lördag: {event.saturday}</li>
+              <li>Söndag: {event.sunday}</li>
+          </ul>
+          <Link href="/events">
+              <a className="btn">Mer info om våra aktiviteter</a>
+          </Link>
+        </div>
+        <div className="image-wrapper">
           <div className="image-container">
             <picture>
               <source srcSet="/yoga.png" media="(min-width: 1024px)" />
