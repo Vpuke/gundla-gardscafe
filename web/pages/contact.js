@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from 'styled-components';
+import { device } from '../components/MediaQueries/mediaQueries';
 
 const StyledForm = styled.div`
 background: #2b2b2b;
@@ -116,6 +117,16 @@ input[type=text], textarea {
   img {
       margin: 70px 0 32px 0;
       width: 132px;
+  }
+
+  @media ${device.tablet} {
+    form {
+        width: 60%;
+  }
+
+  @media ${device.laptop} {
+    form {
+        width: 40%;
   }
 `;
 
