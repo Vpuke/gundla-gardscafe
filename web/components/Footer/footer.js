@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { device } from "../MediaQueries/mediaQueries";
 
 const StyledFooter = styled.footer`
   background: url("../dark-background.png");
@@ -14,7 +15,7 @@ const StyledFooter = styled.footer`
 
   .wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
@@ -31,8 +32,9 @@ const StyledFooter = styled.footer`
     color: #fff;
   }
 
-  div {
+  .socialMediaDiv {
     padding: 10px 0;
+    margin: 10px;
   }
 
   .resize-icon-big {
@@ -43,6 +45,45 @@ const StyledFooter = styled.footer`
   .resize-icon-small {
     height: 48px;
     width: 48px;
+    margin-bottom: 20px;
+  }
+  .topFooter {
+    display: flex;
+  }
+
+  .socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contactFooter {
+    margin: 0 27px 0 20px;
+  }
+
+  .marginFooter {
+    margin: 0 41px 0 20px;
+  }
+
+  @media ${device.laptop} {
+    .socialMedia {
+      display: flex;
+      flex-direction: row;
+    }
+    .middleFooter {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .bottomFooter {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .socialMediaDiv {
+      width: 200px;
+      margin-bottom: 80px;
+    }
   }
 `;
 
@@ -52,38 +93,15 @@ const Footer = ({ data }) => {
     <footer>
       <StyledFooter>
         <div className="wrapper">
-          <div className="left-side-footer">
-            <div>
+          <div className="topFooter">
+            <div className="contactFooter marginFooter">
               <img src="../watch.svg" alt="watch-icon"></img>
               <p>Öppettider</p>
               <p>Lördag {information.openingHours.saturday}</p>
               <p>Söndag {information.openingHours.sunday}</p>
             </div>
-            <div>
-              <img
-                className="resize-icon-big"
-                src="../phone.svg"
-                alt="phone-icon"
-              ></img>
-              <p>RING</p>
-              <p>
-                <a href={"tel:" + information.phone}>{information.phone}</a>
-              </p>
-            </div>
-            <div>
-              <img
-                className="resize-icon-small"
-                src="../facebook.svg"
-                alt="facebook-icon"
-              ></img>
-              <p>FACEBOOK</p>
-              <p>
-                <a href={information.facebookUrl}>@gundlagardscafe</a>
-              </p>
-            </div>
-          </div>
-          <div className="right-side-footer">
-            <div>
+
+            <div className="contactFooter">
               <img src="../map-pin.svg" alt="map-pin-icon"></img>
               <p>Hitta till oss:</p>
               <p>
@@ -95,27 +113,57 @@ const Footer = ({ data }) => {
                 {information.address.postCode} {information.address.city}
               </p>
             </div>
-            <div>
-              <img
-                className="resize-icon-big"
-                src="../email.svg"
-                alt="email-icon"
-              ></img>
-              <p>MAILA</p>
-              <p>
-                <a href={"mailto:" + information.mail}>{information.mail}</a>
-              </p>
+          </div>
+          <div className="socialMedia">
+            <div className="middleFooter">
+              <div className="socialMediaDiv">
+                <img
+                  className="resize-icon-big"
+                  src="../phone.svg"
+                  alt="phone-icon"
+                ></img>
+                <p>RING</p>
+                <p>
+                  <a href={"tel:" + information.phone}>{information.phone}</a>
+                </p>
+              </div>
+
+              <div className="socialMediaDiv">
+                <img
+                  className="resize-icon-small"
+                  src="../facebook.svg"
+                  alt="facebook-icon"
+                ></img>
+                <p>FACEBOOK</p>
+                <p>
+                  <a href={information.facebookUrl}>@gundlagardscafe</a>
+                </p>
+              </div>
             </div>
-            <div>
-              <img
-                className="resize-icon-small"
-                src="../instagram.svg"
-                alt="instagram-icon"
-              ></img>
-              <p>INSTAGRAM</p>
-              <p>
-                <a href={information.instagramUrl}>@gundlagardscafe</a>
-              </p>
+            <div className="bottomFooter">
+              <div className="socialMediaDiv">
+                <img
+                  className="resize-icon-big"
+                  src="../email.svg"
+                  alt="email-icon"
+                ></img>
+                <p>MAILA</p>
+                <p>
+                  <a href={"mailto:" + information.mail}>{information.mail}</a>
+                </p>
+              </div>
+
+              <div className="socialMediaDiv">
+                <img
+                  className="resize-icon-small"
+                  src="../instagram.svg"
+                  alt="instagram-icon"
+                ></img>
+                <p>INSTAGRAM</p>
+                <p>
+                  <a href={information.instagramUrl}>@gundlagardscafe</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
