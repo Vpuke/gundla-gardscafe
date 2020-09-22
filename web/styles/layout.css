@@ -33,11 +33,15 @@ li {
 .menu-background {
   background-image: url("/menu-bg.png") !important;
 }
+@media screen and (min-width: 1024px) {
+  .menu-background {
+    background-image: url("/menu-bg-desktop.png") !important;
+  }
+}
 
 #contact {
   background-image: url("/event-bg-mobile.png") !important;
 }
-
 @media screen and (min-width: 1024px) {
   #contact {
     background-image: url("/event-bg.png") !important;
