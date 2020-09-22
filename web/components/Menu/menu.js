@@ -1,6 +1,7 @@
 // import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { device } from "../MediaQueries/mediaQueries";
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -19,6 +20,21 @@ const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
   z-index: 5;
+
+  @media ${device.laptop} {
+    background: url("/menudesktop-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    a {
+      display: flex;
+      justify-content: center;
+    }
+
+    .burger-opening-hours {
+      margin-right: 65px;
+    }
+  }
 
   .menu-logo {
     position: absolute;
