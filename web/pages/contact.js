@@ -1,6 +1,6 @@
 import { useState } from "react";
-import styled from 'styled-components';
-import { device } from '../components/MediaQueries/mediaQueries';
+import styled from "styled-components";
+import { device } from "../components/MediaQueries/mediaQueries";
 
 const StyledForm = styled.div`
 background: #2b2b2b;
@@ -93,7 +93,7 @@ input[type=text], textarea {
   }
 
   .success {
-      display: none;
+    //   display: none;
       width: 90%;
   }
   
@@ -131,68 +131,103 @@ input[type=text], textarea {
 `;
 
 const Contact = () => {
-    const [status, setStatus] = useState("");
-    const test = document.querySelector(".success");
-    const contactForm =  document.querySelector("form");
+  const [status, setStatus] = useState("");
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-        const req = new XMLHttpRequest();
-        req.open(form.method, form.action);
-        req.setRequestHeader("Accept", "application/json");
-        req.onreadystatechange = () => {
-        if (req.readyState !== XMLHttpRequest.DONE) return;
-        if (req.status === 200) {
-            form.reset();
-            setStatus("SUCCESS");
-        } else {
-            setStatus("ERROR");
-        }
-        };
-        req.send(data);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const req = new XMLHttpRequest();
+    req.open(form.method, form.action);
+    req.setRequestHeader("Accept", "application/json");
+    req.onreadystatechange = () => {
+      if (req.readyState !== XMLHttpRequest.DONE) return;
+      if (req.status === 200) {
+        form.reset();
+        setStatus("SUCCESS");
+      } else {
+        setStatus("ERROR");
+      }
     };
-    
-    if (status === "SUCCESS") {
-        test.classList.add("show");
-        contactForm.classList.add("hide");
-    }
-
-    return (
-        <StyledForm>
-            <h1>Boka event/catering</h1>
-            <form action="https://formspree.io/mknqdqdb" method="POST" onSubmit={sendEmail}>        
-                <div className="radio-buttons">
-                    <p>Vänligen välj ett alternativ:</p>
-                    <div>
-                        <input type="radio" id="event" name="request" value="event" required/>
-                        <label htmlFor="event">Event</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="catering" name="request" value="catering" />
-                        <label htmlFor="catering">Catering</label>
-                    </div>
-                </div>
-                <label htmlFor="name">Ditt namn</label>
-                <input type="text" id="name" name="name" placeholder="Skriv ditt namn här" required/>
-                <label htmlFor="email">Din mailadress</label>
-                <input type="text" id="email" name="_replyto" placeholder="Skriv din mailadress här" required/>
-                <label htmlFor="message">Ditt meddelande</label>
-                <textarea name="message" id="message" rows="6" cols="50" placeholder="Skriv ditt meddelande här" required></textarea>
-                <button type="submit">Skicka förfrågan</button>
-                {status === "ERROR" && <p>Något gick fel. Försök igen.</p>}
-            </form>
-            <div className="success">
-                <div className="success-text">
-                    <img src="../success.svg" alt="success-icon"></img>
-                    <h3>Din förfrågan har skickats!</h3>
-                    <p>Vi kommer att kontakta dig så snart vi kan, vanligtvis inom 24 timmar.</p>
-                </div>
-                <a className="btn" href="/">Tillbaka till startsidan</a>
-            </div>
-        </StyledForm>
-    );
+    req.send(data);
   };
 
-  export default Contact;
+  return (
+    <StyledForm>
+      <h1>Boka event/catering</h1>
+      {status === "SUCCESS" ? (
+        <div className="success">
+          <div className="success-text">
+            <img src="../success.svg" alt="success-icon"></img>
+            <h3>Din förfrågan har skickats!</h3>
+            <p>
+              Vi kommer att kontakta dig så snart vi kan, vanligtvis inom 24
+              timmar.
+            </p>
+          </div>
+          <a className="btn" href="/">
+            Tillbaka till startsidan
+          </a>
+        </div>
+      ) : (
+        <form
+          action="https://formspree.io/mknqdqdb"
+          method="POST"
+          onSubmit={sendEmail}
+        >
+          <div className="radio-buttons">
+            <p>Vänligen välj ett alternativ:</p>
+            <div>
+              <input
+                type="radio"
+                id="event"
+                name="request"
+                value="event"
+                required
+              />
+              <label htmlFor="event">Event</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="catering"
+                name="request"
+                value="catering"
+              />
+              <label htmlFor="catering">Catering</label>
+            </div>
+          </div>
+          <label htmlFor="name">Ditt namn</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Skriv ditt namn här"
+            required
+          />
+          <label htmlFor="email">Din mailadress</label>
+          <input
+            type="text"
+            id="email"
+            name="_replyto"
+            placeholder="Skriv din mailadress här"
+            required
+          />
+          <label htmlFor="message">Ditt meddelande</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="6"
+            cols="50"
+            placeholder="Skriv ditt meddelande här"
+            required
+          ></textarea>
+          <button type="submit">Skicka förfrågan</button>
+          {status === "ERROR" && <p>Något gick fel. Försök igen.</p>}
+        </form>
+      )}
+    </StyledForm>
+  );
+};
+
+export default Contact;
