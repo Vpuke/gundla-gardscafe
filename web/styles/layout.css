@@ -37,3 +37,9 @@ li {
 #contact {
   background-image: url("/event-bg-mobile.png") !important;
 }
+
+@media screen and (min-width: 1024px) {
+  #contact {
+    background-image: url("/event-bg.png") !important;
+  }
+}
