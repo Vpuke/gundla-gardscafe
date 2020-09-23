@@ -17,8 +17,7 @@ const StyledLocation = styled.div`
   }
 
   .directions {
-    width: 335px;
-    height: 284px;
+    width: 80%;
   }
 
   .locationContent {
@@ -31,6 +30,37 @@ const StyledLocation = styled.div`
 
   .directionsImage {
     margin: 20px;
+    text-align: center;
+  }
+
+  @media ${device.mobileS} {
+    h1 {
+      font-size: 25px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .locationParagraph {
+      font-size: 10px;
+    }
+  }
+
+  @media ${device.mobileM} {
+    h1 {
+      font-size: 36px;
+    }
+    h2{
+      font-size 25px;
+    }
+    p{
+      font-size: 14px;
+    }
+    .locationParagraph{
+      font-size: 12px;
+    }
   }
 
   @media ${device.mobileL} {

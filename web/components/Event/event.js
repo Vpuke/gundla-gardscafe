@@ -216,6 +216,30 @@ small {
     margin: 6px 0;
   }
 
+  @media ${device.mobileS} {
+    p {
+      font-size: 12px;
+    }
+    li {
+      font-size: 12px;
+    }
+    a.btn {
+      font-size: 12px;
+    }
+    .image-wrapper {
+      margin: 10px 0;
+    }
+    .contact a {
+      font-size: 14px;
+    }
+    .form-btn img{
+      width 30px;
+    }
+    div.form-btn{
+      text-align: center;
+    }
+  }
+
   @media ${device.mobileM} {
     p {
       font-size: 14px;
@@ -225,6 +249,30 @@ small {
     }
     a.btn {
       font-size: 14px;
+    }
+  }
+
+  @media ${device.mobileL}{
+    p{
+      font-size: 16px;
+    }
+    li{
+      font-size 16px;
+    }
+    a.btn{
+      font-size: 16px;
+    }
+    .image-wrapper{
+      margin: 20px 0 ;
+    }
+    .contact a {
+      font-size: 16px;
+    }
+    .form-btn img{
+      width 40px;
+    }
+    .marginFooter{
+      margin: 0px -5px 0 20px;
     }
   }
 

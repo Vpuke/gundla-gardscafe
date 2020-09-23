@@ -18,6 +18,12 @@ const StyledSection = styled.section`
     padding: 20px 0 0 0;
   }
 
+  @media ${device.mobileS} {
+    h1 {
+      font-size: 25px;
+    }
+  }
+
   @media ${device.laptop} {
     h1 {
       font-size: 64px;
