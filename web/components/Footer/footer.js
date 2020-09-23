@@ -79,7 +79,7 @@ const StyledFooter = styled.footer`
       width: 40px;
     }
     .socialMediaDiv {
-      margin: 0;
+      margin: 5px;
     }
     .marginFooter {
       margin: 0 -10px 0 20px;
@@ -88,13 +88,13 @@ const StyledFooter = styled.footer`
 
   @media ${device.mobileM} {
     .marginFooter {
-      margin: 0 -5px 0 20px;
+      margin: 0 10px 0 40px;
     }
   }
 
   @media ${device.mobileL} {
     .marginFooter {
-      margin: 0 10px 0 20px;
+      margin: 0 10px 0 40px;
     }
     .socialMediaDiv {
       padding: 10px 0;
