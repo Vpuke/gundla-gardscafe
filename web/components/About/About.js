@@ -7,6 +7,26 @@ const StyledAbout = styled.div`
   justify-content: center;
   padding: 0 20px 0 20px;
 
+  @media ${device.mobileS} {
+    p {
+      font-size: 12px;
+    }
+  }
+
+  @media ${device.mobileM} {
+    p {
+      font-size: 14px;
+    }
+  }
+  @media ${device.mobileL} {
+    p {
+      font-size: 16px;
+    }
+    h2 {
+      font-size: 25px;
+    }
+  }
+
   @media ${device.tablet} {
     text-align: start;
     width: 70%;

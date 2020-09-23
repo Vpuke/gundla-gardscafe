@@ -65,9 +65,44 @@ const StyledFooter = styled.footer`
     margin: 0 41px 0 20px;
   }
 
+  @media ${device.mobileS} {
+    p,
+    a {
+      font-size: 12px;
+    }
+    .resize-icon-small {
+      height: 36px;
+      width: 36px;
+    }
+    .resize-icon-big {
+      height: 40px;
+      width: 40px;
+    }
+    .socialMediaDiv {
+      margin: 0;
+    }
+    .marginFooter {
+      margin: 0 -10px 0 20px;
+    }
+  }
+
   @media ${device.mobileM} {
     .marginFooter {
-      margin: 0 14px 0 20px;
+      margin: 0 -5px 0 20px;
+    }
+  }
+
+  @media ${device.mobileL} {
+    .marginFooter {
+      margin: 0 10px 0 20px;
+    }
+    .socialMediaDiv {
+      padding: 10px 0;
+      margin: 10px;
+    }
+    p,
+    a {
+      font-size: 16px;
     }
   }
 

@@ -59,6 +59,25 @@ const StyledMenu = styled.div`
     font-size: 12px;
   }
 
+  @media ${device.mobileS} {
+    padding-top: 10px;
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+    .menuItemSoup {
+      margin-top: 5px;
+    }
+    .menuItem {
+      margin-top: 5px;
+    }
+    .drinkWrapper {
+      margin-top: 5px;
+    }
+  }
+
   @media ${device.mobileM} {
     h2 {
       font-size: 18px;

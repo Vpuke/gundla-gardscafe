@@ -96,6 +96,30 @@ const StyledWrapper = styled.div`
     margin: 6px 0;
   }
 
+  @media ${device.mobileS} {
+    p {
+      font-size: 12px;
+    }
+    li {
+      font-size: 12px;
+    }
+    a.btn {
+      font-size: 12px;
+    }
+    .image-wrapper {
+      margin: 10px 0;
+    }
+    .contact a {
+      font-size: 14px;
+    }
+    .form-btn img{
+      width 30px;
+    }
+    div.form-btn{
+      text-align: center;
+    }
+  }
+
   @media ${device.mobileM} {
     p {
       font-size: 14px;
@@ -105,6 +129,30 @@ const StyledWrapper = styled.div`
     }
     a.btn {
       font-size: 14px;
+    }
+  }
+
+  @media ${device.mobileL}{
+    p{
+      font-size: 16px;
+    }
+    li{
+      font-size 16px;
+    }
+    a.btn{
+      font-size: 16px;
+    }
+    .image-wrapper{
+      margin: 20px 0 ;
+    }
+    .contact a {
+      font-size: 16px;
+    }
+    .form-btn img{
+      width 40px;
+    }
+    .marginFooter{
+      margin: 0px -5px 0 20px;
     }
   }
 
@@ -195,14 +243,22 @@ const Event = ({ data }) => {
           <p>Tryck här nedan för att komma till våra formulär.</p>
           <div className="forms">
             <div className="form-btn">
-              <img src="../calendar.svg" alt="calendar-icon"></img>
+              <img
+                className="eventIcon"
+                src="../calendar.svg"
+                alt="calendar-icon"
+              ></img>
               <Link href="/contact">
                 <a>Boka event</a>
               </Link>
               <small>Ha ditt evenemang hos oss</small>
             </div>
             <div className="form-btn">
-              <img src="../catering.svg" alt="catering-icon"></img>
+              <img
+                className="eventIcon"
+                src="../catering.svg"
+                alt="catering-icon"
+              ></img>
               <Link href="/contact">
                 <a>Boka catering</a>
               </Link>
