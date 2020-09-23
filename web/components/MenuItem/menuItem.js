@@ -96,6 +96,15 @@ const StyledMenu = styled.div`
     }
   }
 
+  @media ${device.mobileM} and (min-height: 812px) {
+    div.menuItemSoupWrapper {
+      margin-top: 50px;
+    }
+    p.menuInformation {
+      margin-top: 60px;
+    }
+  }
+
   @media ${device.mobileL} {
     h2 {
       font-size: 22px;
