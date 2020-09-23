@@ -13,6 +13,7 @@ align-items: center;
 
 h1 {
     font-weight: 400;
+    font-size: 25px;
 }
 
 h3 {
@@ -72,7 +73,7 @@ input[type=text], textarea {
     font-weight: 700;
     font-size: 16px;
     text-align: left;
-    margin-top: 30px;
+    margin: 30px 0;
     cursor: pointer;
     padding: 6px 0 6px 10px;
   }
@@ -107,6 +108,12 @@ input[type=text], textarea {
   img {
       margin: 70px 0 32px 0;
       width: 132px;
+  }
+
+  @media ${device.mobileS} {
+    // form {
+      
+    // }
   }
 
   @media ${device.tablet} {
