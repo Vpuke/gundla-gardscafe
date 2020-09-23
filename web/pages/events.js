@@ -46,7 +46,7 @@ const StyledEvent = styled.div`
     margin: 80px 0;
   }
 
-  .activities-container {
+  .activitiesContainer {
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -67,7 +67,7 @@ export default function Events({ data }) {
           <Navigation />
             <h1>Våra aktiviteter</h1>
           <div className="wrapper">
-            <div className="activities-container">
+            <div className="activitiesContainer">
               {data.eventInformation.map((item, key) => (
                 <div key={key} className="activities">
                     <h2>{item.title}</h2>
