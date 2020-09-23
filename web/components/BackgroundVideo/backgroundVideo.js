@@ -36,7 +36,7 @@ const BackgroundVideo = () => {
   return (
     <StyledBackgroundVideo>
       {/* <div className="backgroundVideo"> */}
-      <video className="videoSource" autoPlay="autoplay" loop="loop" muted>
+      <video className="videoSource" autoPlay="autoplay" loop="loop" muted playsinline>
         <source src={videoSourceLarge} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

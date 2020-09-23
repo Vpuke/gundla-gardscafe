@@ -41,7 +41,7 @@ a {
   text-decoration: none;
 }
 
-.image-wrapper {
+.imageWrapper {
   widht: 100%;
   margin: 20px 0;
   overflow: hidden;
@@ -50,7 +50,7 @@ a {
   justify-content: center;
 }
 
-.image-container {
+.imageContainer {
   max-width: 268px;
 }
 
@@ -67,13 +67,13 @@ img {
   margin: 24px 10px 20px 10px;
 }
 
-.form-btn {
+.formBtn {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.form-btn img {
+.formBtn img {
   width: 40px;
 }
 
@@ -103,7 +103,7 @@ small {
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .event-list {
+  .eventList {
     width: 40%;
   }
 }
@@ -120,12 +120,12 @@ small {
     padding: 25px;
   }
 
-  .image-wrapper {
+  .imageWrapper {
     width: 40%;
     margin: 0;
   }
 
-  .image-container {
+  .imageContainer {
     max-width: 100%;
   }
 
@@ -133,11 +133,11 @@ small {
     margin-top: 32px;
   }
 
-  .form-btn:last-child {
+  .formBtn:last-child {
     padding-left: 100px;
   }
 
-  .form-btn img {
+  .formBtn img {
     width: 50px;
   }
 }
@@ -156,7 +156,7 @@ const Event = ({ data }) => {
   return (
     <StyledWrapper>
       <div className="container">
-        <div className="event-list">
+        <div className="eventList">
           <p>{event.description}</p>
           <ul>
               <li>Måndag: {event.monday}</li>
@@ -171,8 +171,8 @@ const Event = ({ data }) => {
               <a className="btn">Mer info om våra aktiviteter</a>
           </Link>
         </div>
-        <div className="image-wrapper">
-          <div className="image-container">
+        <div className="imageWrapper">
+          <div className="imageContainer">
             <picture>
               <source srcSet="/yoga.png" media="(min-width: 1024px)" />
               <img src="/yoga-mobile.png" alt="Outdoor yoga class" />
@@ -183,14 +183,14 @@ const Event = ({ data }) => {
           <p className="bold">Vill du boka ett eget event eller catering?</p>
           <p>Tryck här nedan för att komma till våra formulär.</p>
           <div className="forms">
-            <div className="form-btn">
+            <div className="formBtn">
               <img src="../calendar.svg" alt="calendar-icon"></img>
               <Link href="/contact">
                 <a>Boka event</a>
               </Link>
               <small>Ha ditt evenemang hos oss</small>
             </div>
-            <div className="form-btn">
+            <div className="formBtn">
               <img src="../catering.svg" alt="catering-icon"></img>
               <Link href="/contact">
                 <a>Boka catering</a>

@@ -28,7 +28,7 @@ form {
     flex-direction: column;
 }
 
-.radio-buttons {
+.radioButtons {
     display: flex;
     flex-direction: column;
 }
@@ -93,25 +93,15 @@ input[type=text], textarea {
   }
 
   .success {
-    //   display: none;
       width: 90%;
   }
   
-  .success-text {
+  .successText {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  .show {
-      display: flex;
-      flex-direction: column;   
-  }
-
-  .hide {
-    display: none;
   }
 
   img {
@@ -157,7 +147,7 @@ const Contact = () => {
       <h1>Boka event/catering</h1>
       {status === "SUCCESS" ? (
         <div className="success">
-          <div className="success-text">
+          <div className="successText">
             <img src="../success.svg" alt="success-icon"></img>
             <h3>Din förfrågan har skickats!</h3>
             <p>
@@ -175,7 +165,7 @@ const Contact = () => {
           method="POST"
           onSubmit={sendEmail}
         >
-          <div className="radio-buttons">
+          <div className="radioButtons">
             <p>Vänligen välj ett alternativ:</p>
             <div>
               <input
