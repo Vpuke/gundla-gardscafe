@@ -9,7 +9,6 @@ const StyledEvent = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: white;
   box-sizing: border-box;
   padding: 20px 20px 50px 20px;
 

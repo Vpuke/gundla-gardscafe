@@ -29,7 +29,7 @@ const StyledFooter = styled.footer`
     margin: 0;
     font-size: 14px;
     font-weight: normal;
-    color: #fff;
+    color: #FCFDF7;
   }
 
   .socialMediaDiv {
