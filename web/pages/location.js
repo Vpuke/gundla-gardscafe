@@ -30,6 +30,13 @@ const StyledLocation = styled.div`
   .directionsImage {
     margin: 20px;
     text-align: center;
+    max-height: 500px;
+    max-width: 500px;
+  }
+
+  .directionsImage img {
+    height: auto;
+    width: 100%;
   }
 
   @media ${device.mobileS} {
@@ -59,12 +66,6 @@ const StyledLocation = styled.div`
     }
     .locationParagraph{
       font-size: 12px;
-    }
-  }
-
-  @media ${device.mobileL} {
-    .directionsImage {
-      text-align: center;
     }
   }
 
