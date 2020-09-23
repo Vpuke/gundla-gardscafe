@@ -176,6 +176,7 @@ const MenuItem = ({ data }) => {
         <div className="menuItemsWrapper">
           <div className="menuItemSoupWrapper">
             <img
+              loading="lazy"
               src="soup.svg"
               alt="Soup Icon"
               width="40px"
@@ -191,7 +192,7 @@ const MenuItem = ({ data }) => {
             ))}
           </div>
           <div className="menuItemWrapper">
-            <img src="fika.svg" alt="Bun Icon" />
+            <img loading="lazy" src="fika.svg" alt="Bun Icon" />
             {data.pastryMenu.map((item, key) => (
               <div key={key} className="menuItem">
                 <h2>{item.name}</h2>
@@ -201,7 +202,7 @@ const MenuItem = ({ data }) => {
             ))}
           </div>
           <div className="drinkItemWrapper">
-            <img src="drink.svg" alt="Drink icon" />
+            <img loading="lazy" src="drink.svg" alt="Drink icon" />
             <div className="drinkWrapper">
               {data.drinkMenu.map((item, key) => (
                 <div key={key} className="drinkItem">

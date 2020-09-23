@@ -65,7 +65,7 @@ const InstagramFeed = (props) => {
       {url.map((item, i) => (
         <div className="instagramImgWrapper" key={i}>
           <a href="https://www.instagram.com/gundlagardscafe/">
-            <img src={item.node.display_url} key={i}></img>
+            <img loading="lazy" src={item.node.display_url} key={i}></img>
           </a>
         </div>
       ))}

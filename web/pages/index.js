@@ -47,7 +47,7 @@ export default function Index({ data }) {
   return (
     <div>
       <StyledLandingPage id="home">
-        <img className="main-logo" src="/main-logo.svg"></img>
+        <img loading="lazy" className="main-logo" src="/main-logo.svg"></img>
         <BackgroundVideo />
         <Navigation />
       </StyledLandingPage>

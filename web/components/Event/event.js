@@ -236,7 +236,11 @@ const Event = ({ data }) => {
           <div className="imageContainer">
             <picture>
               <source srcSet="/yoga.png" media="(min-width: 1024px)" />
-              <img src="/yoga-mobile.png" alt="Outdoor yoga class" />
+              <img
+                loading="lazy"
+                src="/yoga-mobile.png"
+                alt="Outdoor yoga class"
+              />
             </picture>
           </div>
         </div>
@@ -245,14 +249,22 @@ const Event = ({ data }) => {
           <p>Tryck här nedan för att komma till våra formulär.</p>
           <div className="forms">
             <div className="formBtn">
-              <img src="../calendar.svg" alt="calendar-icon"></img>
+              <img
+                loading="lazy"
+                src="../calendar.svg"
+                alt="calendar-icon"
+              ></img>
               <Link href="/contact">
                 <a>Boka event</a>
               </Link>
               <small>Ha ditt evenemang hos oss</small>
             </div>
             <div className="formBtn">
-              <img src="../catering.svg" alt="catering-icon"></img>
+              <img
+                loading="lazy"
+                src="../catering.svg"
+                alt="catering-icon"
+              ></img>
               <Link href="/contact">
                 <a>Boka catering</a>
               </Link>
