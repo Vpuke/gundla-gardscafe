@@ -27,11 +27,11 @@ li {
 }
 
 a {
-  color: #fff;
+  color: #FCFDF7;
 }
 
 .btn {
-  border-left: 2px solid #fff;
+  border-left: 2px solid #FCFDF7;
   padding-left: 10px;
   cursor: pointer;
   font-family: IBM Plex Sans;

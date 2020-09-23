@@ -6,11 +6,10 @@ import { device } from "../components/MediaQueries/mediaQueries";
 const StyledLocation = styled.div`
   background: #2b2b2b;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
 
   h1 {
     margin: 10px 0 10px 0;

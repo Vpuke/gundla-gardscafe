@@ -4,7 +4,6 @@ import { device } from "../MediaQueries/mediaQueries";
 const StyledSection = styled.section`
   height: 100vh;
   background-image: url("dark-background.png");
-  color: white;
   background-repeat: no-repeat;
   background-size: cover;
 

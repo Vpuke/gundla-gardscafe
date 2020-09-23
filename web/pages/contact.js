@@ -4,9 +4,9 @@ import { device } from "../components/MediaQueries/mediaQueries";
 
 const StyledForm = styled.div`
 background: #2b2b2b;
-color: #fff;
+color: #FCFDF7;
 width: 100%;
-height: 100vh;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -35,7 +35,7 @@ form {
 
 p, input[type=text], textarea {
     background: #2b2b2b;
-    color: #fff;
+    color: #FCFDF7;
     font-family: IBM Plex Sans;
     font-weight: 300;
     font-size: 16px;
@@ -54,7 +54,7 @@ input[type=text], textarea {
     display: inline-block;
     outline: none;
     border: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #FCFDF7;
   }
 
   input[type=radio] {
@@ -65,9 +65,9 @@ input[type=text], textarea {
   button {
     outline: none;
     border: none;
-    border-left: 2px solid #fff;
+    border-left: 2px solid #FCFDF7;
     background: #2b2b2b;
-    color: #fff;
+    color: #FCFDF7;
     font-family: IBM Plex Sans;
     font-weight: 700;
     font-size: 16px;
@@ -80,8 +80,8 @@ input[type=text], textarea {
   .btn {
     position: absolute;
     bottom: 60px;
-    border-left: 2px solid #fff;
-    color: #fff;
+    border-left: 2px solid #FCFDF7;
+    color: #FCFDF7;
     font-family: IBM Plex Sans;
     font-weight: 700;
     font-size: 16px;

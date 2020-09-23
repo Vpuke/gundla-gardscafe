@@ -6,7 +6,7 @@ const StyledMenu = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  // color: white;
   padding: 16px;
   text-align: center;
 
