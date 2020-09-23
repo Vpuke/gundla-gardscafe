@@ -134,6 +134,24 @@ small {
     }
   }
 
+  @media ${device.mobileM} and (min-height: 812px) {
+    div.contact{
+      margin: 60px 10px 20px 10px;
+    }
+    .contact{
+      text-align:center;
+    }
+    ul{
+      margin:40px 0 40px 0;
+    }
+    div.formBtn{
+      margin-right:10px;
+    }
+    div.imageWrapper{
+      margin: 40px 0 10px 0;
+    }
+  }
+
   @media ${device.mobileL}{
     p{
       font-size: 16px;

@@ -27,10 +27,15 @@ const StyledImage = styled.div`
   }
 
   @media ${device.mobileM}{
+    margin-top: 20px;
     .instagramImgWrapper{
       width: 150px;
       height: 150px;
     }
+  }
+
+  @media ${device.mobileM} and (min-height: 812px) {
+    margin-top: 50px;
   }
 
   @media ${device.mobileL}{

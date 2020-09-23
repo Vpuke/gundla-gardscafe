@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../MediaQueries/mediaQueries";
 
 const StyledSection = styled.section`
-  height: 100%;
+  height: 100vh;
   background-image: url("dark-background.png");
   color: white;
   background-repeat: no-repeat;
@@ -22,6 +22,10 @@ const StyledSection = styled.section`
     h1 {
       font-size: 25px;
     }
+  }
+
+  @media ${device.mobileM} and (min-height: 812px) {
+    height: 100vh;
   }
 
   @media ${device.laptop} {

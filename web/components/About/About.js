@@ -18,6 +18,13 @@ const StyledAbout = styled.div`
       font-size: 14px;
     }
   }
+
+  @media ${device.mobileM} and (min-height: 812px) {
+    h2 {
+      font-size: 25px;
+    }
+  }
+
   @media ${device.mobileL} {
     p {
       font-size: 16px;
