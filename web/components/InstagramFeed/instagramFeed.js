@@ -27,7 +27,7 @@ const StyledImage = styled.div`
   }
 
   @media ${device.mobileM}{
-    margin-top: 20px;
+    margin-top: 5px;
     .instagramImgWrapper{
       width: 150px;
       height: 150px;

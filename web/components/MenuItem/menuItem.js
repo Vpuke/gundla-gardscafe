@@ -122,7 +122,7 @@ const StyledMenu = styled.div`
       margin-top: 15px;
     }
     p.menuInformation {
-      margin-top: 10px;
+      margin-top: 20px;
     }
   }
 
