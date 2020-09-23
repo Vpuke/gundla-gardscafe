@@ -65,6 +65,12 @@ const StyledFooter = styled.footer`
     margin: 0 41px 0 20px;
   }
 
+  @media ${device.mobileM} {
+    .marginFooter {
+      margin: 0 14px 0 20px;
+    }
+  }
+
   @media ${device.laptop} {
     .socialMedia {
       display: flex;
