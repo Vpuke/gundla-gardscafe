@@ -136,14 +136,14 @@ const Footer = ({ data }) => {
         <div className="wrapper">
           <div className="topFooter">
             <div className="contactFooter marginFooter">
-              <img src="../watch.svg" alt="watch-icon"></img>
+              <img loading="lazy" src="../watch.svg" alt="watch-icon"></img>
               <p>Öppettider</p>
               <p>Lördag {information.openingHours.saturday}</p>
               <p>Söndag {information.openingHours.sunday}</p>
             </div>
 
             <div className="contactFooter">
-              <img src="../map-pin.svg" alt="map-pin-icon"></img>
+              <img loading="lazy" src="../map-pin.svg" alt="map-pin-icon"></img>
               <p>Hitta till oss:</p>
               <p>
                 <Link href="/location">
@@ -159,6 +159,7 @@ const Footer = ({ data }) => {
             <div className="middleFooter">
               <div className="socialMediaDiv">
                 <img
+                  loading="lazy"
                   className="resize-icon-big"
                   src="../phone.svg"
                   alt="phone-icon"
@@ -171,6 +172,7 @@ const Footer = ({ data }) => {
 
               <div className="socialMediaDiv">
                 <img
+                  loading="lazy"
                   className="resize-icon-small"
                   src="../facebook.svg"
                   alt="facebook-icon"
@@ -184,6 +186,7 @@ const Footer = ({ data }) => {
             <div className="bottomFooter">
               <div className="socialMediaDiv">
                 <img
+                  loading="lazy"
                   className="resize-icon-big"
                   src="../email.svg"
                   alt="email-icon"
@@ -196,6 +199,7 @@ const Footer = ({ data }) => {
 
               <div className="socialMediaDiv">
                 <img
+                  loading="lazy"
                   className="resize-icon-small"
                   src="../instagram.svg"
                   alt="instagram-icon"

@@ -92,7 +92,7 @@ const Menu = ({ open, setOpen }) => {
   return (
     <nav>
       <StyledMenu open={open}>
-        <img className="menu-logo" src="/menu-logo.svg"></img>
+        <img loading="lazy" className="menu-logo" src="/menu-logo.svg"></img>
         <a href="/#home" onClick={() => setOpen(!open)}>
           Hem
         </a>

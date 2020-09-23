@@ -126,7 +126,12 @@ const Location = () => {
           </p>
         </div>
         <div className="directionsImage">
-          <img className="directions" src="../location.png" alt="directions" />
+          <img
+            loading="lazy"
+            className="directions"
+            src="../location.png"
+            alt="directions"
+          />
         </div>
       </div>
     </StyledLocation>

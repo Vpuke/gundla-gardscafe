@@ -148,7 +148,7 @@ const Contact = () => {
       {status === "SUCCESS" ? (
         <div className="success">
           <div className="successText">
-            <img src="../success.svg" alt="success-icon"></img>
+            <img loading="lazy" src="../success.svg" alt="success-icon"></img>
             <h3>Din förfrågan har skickats!</h3>
             <p>
               Vi kommer att kontakta dig så snart vi kan, vanligtvis inom 24
