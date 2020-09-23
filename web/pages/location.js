@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import Menu from "../components/Menu/menu";
-import Burger from "../components/Hamburger/hamburger";
+import Navigation from "../components/Navigation/navigation";
 import { device } from "../components/MediaQueries/mediaQueries";
 
 const StyledLocation = styled.div`
@@ -95,14 +94,9 @@ const StyledLocation = styled.div`
 `;
 
 const Location = () => {
-  const [open, setOpen] = React.useState(false);
-  const node = React.useRef();
   return (
     <StyledLocation>
-      <div ref={node}>
-        <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
-      </div>
+      <Navigation />
       <div>
         <h1>Hitta hit</h1>
       </div>
