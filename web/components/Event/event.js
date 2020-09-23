@@ -97,124 +97,6 @@ small {
   margin: 6px 0;
 }
 
-@media ${device.tablet} {
-
-  .container {
-    padding: 0 15px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .eventList {
-    width: 40%;
-
-
-  p {
-    padding: 0 5px;
-    font-size: 16px;
-
-  }
-
-  ul {
-    padding: 5px;
-    background: rgba(54, 54, 54, 0.8);
-    border-radius: 5px;
-  }
-
-  li {
-    list-style: none;
-    font-size: 16px;
-  }
-
-  a {
-    color: #fff;
-  }
-
-  .btn {
-    border-left: 2px solid #fff;
-    padding-left: 10px;
-    cursor: pointer;
-    font-family: IBM Plex Sans;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: left;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-
-  .imageWrapper {
-    width: 40%;
-    margin: 0;
-  }
-
-  .imageContainer {
-    max-width: 100%;
-
-  .image-wrapper {
-    widht: 100%;
-    margin: 20px 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .image-container {
-    max-width: 268px;
-  }
-
-  img {
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-
-  }
-
-  .forms {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 24px 10px 20px 10px;
-  }
-
-
-  .formBtn:last-child {
-    padding-left: 100px;
-  }
-
-  .formBtn img {
-    width: 50px;
-
-  .form-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-btn img {
-    width: 40px;
-
-  }
-
-  small {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 300;
-    font-size: 12px;
-  }
-
-  .contact p {
-    margin: 0;
-  }
-
-  .contact .bold {
-    font-weight: 500;
-  }
-
-  .contact a {
-    font-size: 18px;
-    margin: 6px 0;
-  }
 
   @media ${device.mobileS} {
     p {
@@ -226,16 +108,16 @@ small {
     a.btn {
       font-size: 12px;
     }
-    .image-wrapper {
+    .imageWrapper {
       margin: 10px 0;
     }
     .contact a {
       font-size: 14px;
     }
-    .form-btn img{
+    .formBtn img{
       width 30px;
     }
-    div.form-btn{
+    div.formBtn{
       text-align: center;
     }
   }
@@ -262,13 +144,13 @@ small {
     a.btn{
       font-size: 16px;
     }
-    .image-wrapper{
+    .imageWrapper{
       margin: 20px 0 ;
     }
     .contact a {
       font-size: 16px;
     }
-    .form-btn img{
+    .formBtn img{
       width 40px;
     }
     .marginFooter{
@@ -283,7 +165,7 @@ small {
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    .event-list {
+    .eventList {
       width: 40%;
     }
   }
@@ -300,12 +182,12 @@ small {
       padding: 25px;
     }
 
-    .image-wrapper {
+    .imageWrapper {
       width: 40%;
       margin: 0;
     }
 
-    .image-container {
+    .imageContainer {
       max-width: 100%;
     }
 
@@ -313,11 +195,11 @@ small {
       margin-top: 32px;
     }
 
-    .form-btn:last-child {
+    .formBtn:last-child {
       padding-left: 100px;
     }
 
-    .form-btn img {
+    .formBtn img {
       width: 50px;
     }
   }
