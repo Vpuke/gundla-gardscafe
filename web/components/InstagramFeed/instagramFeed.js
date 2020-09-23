@@ -18,6 +18,20 @@ const StyledImage = styled.div`
     height: 100%;
   }
 
+  @media ${device.mobileM}{
+    .instagramImgWrapper{
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media ${device.mobileL}{
+    .instagramImgWrapper{
+      width: 170px;
+      height: 170px;
+    }
+  }
+
   @media ${device.tablet}{
     .instagramImgWrapper{
       margin-top: 100px;

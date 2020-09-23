@@ -59,6 +59,45 @@ const StyledMenu = styled.div`
     font-size: 12px;
   }
 
+  @media ${device.mobileM} {
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .menuItemSoup {
+      margin-top: 10px;
+    }
+    .menuItem {
+      margin-top: 10px;
+    }
+    .drinkWrapper {
+      margin-top: 10px;
+    }
+  }
+
+  @media ${device.mobileL} {
+    h2 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 16px;
+    }
+    .menuItemSoup {
+      margin-top: 15px;
+    }
+    .menuItem {
+      margin-top: 15px;
+    }
+    .drinkWrapper {
+      margin-top: 15px;
+    }
+    p.menuInformation {
+      margin-top: 10px;
+    }
+  }
+
   @media ${device.laptop} {
     display: flex;
     flex-direction: column;
