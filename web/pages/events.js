@@ -8,22 +8,22 @@ const StyledEvent = styled.div`
   background: #2b2b2b;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   box-sizing: border-box;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 50px 20px;
 
   h1 {
     margin: 0;
     padding: 0 0 24px 0;
     text-align: center;
-    font-size: 36px;
+    font-size: 25px;
   }
 
   h2 {
     font-family: "IBM Plex Sans";
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .activities {
@@ -33,7 +33,21 @@ const StyledEvent = styled.div`
   .activities p, .info p {
     margin: 0;
     padding-top: 4px;
+    font-size: 12px;
+}
+
+@media ${device.mobileM} {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
     font-size: 16px;
+  }
+
+  .activities p, .info p {
+    font-size: 14px;
+  }
 }
 
 @media ${device.laptop} {
