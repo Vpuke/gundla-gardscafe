@@ -5,8 +5,8 @@ import { device } from "../components/MediaQueries/mediaQueries";
 
 const StyledLocation = styled.div`
   background: #2b2b2b;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +31,12 @@ const StyledLocation = styled.div`
 
   .directionsImage {
     margin: 20px;
+  }
+
+  @media ${device.mobileL} {
+    .directionsImage {
+      text-align: center;
+    }
   }
 
   @media ${device.laptop} {
