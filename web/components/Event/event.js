@@ -32,7 +32,7 @@ a {
 
 .btn {
   border-left: 2px solid #FCFDF7;
-  padding-left: 10px;
+padding:5px 10px;
   cursor: pointer;
   font-family: IBM Plex Sans;
   font-weight: 400;
@@ -40,6 +40,14 @@ a {
   text-align: left;
   cursor: pointer;
   text-decoration: none;
+
+
+}
+
+.btn:hover{
+  background-color: white;
+  color: black;
+
 }
 
 .imageWrapper {

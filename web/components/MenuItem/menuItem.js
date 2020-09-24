@@ -172,6 +172,9 @@ const StyledMenu = styled.div`
       font-size: 16px;
       width: 500px;
     }
+    p.menuInformation {
+      margin-top: 170px;
+    }
   }
 `;
 const MenuItem = ({ data }) => {
