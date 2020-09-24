@@ -76,6 +76,12 @@ input[type=text], textarea {
     margin: 30px 0;
     cursor: pointer;
     padding: 6px 0 6px 10px;
+    width: 140px;
+  }
+
+  button:hover{
+      background-color: white;
+      color: black;
   }
 
   .btn {
