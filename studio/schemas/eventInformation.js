@@ -1,18 +1,18 @@
 export default {
   name: "eventInformation",
   type: "document",
-  title: "Aktiviteter",
+  title: "Activities",
   fields: [
     {
       name: "title",
       type: "string",
-      title: "Rubrik",
+      title: "Title",
     },
     {
       name: "description",
       type: "text",
-      title: "Beskrivning",
-      description: "Beskriv aktiviteten.",
+      title: "Description",
+      description: "Describe the activity.",
     },
   ],
 };

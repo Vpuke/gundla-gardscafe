@@ -1,17 +1,17 @@
 export default {
     name: "openingHours",
     type: "object",
-    title: "Öppettider",
+    title: "Opening hours",
     fields: [
         {
         name: "saturday",
         type: "string",
-        title: "Lördag",
+        title: "Saturday",
         },
         {
         name: "sunday",
         type: "string",
-        title: "Söndag",
+        title: "Sunday",
         },
     ]
 }

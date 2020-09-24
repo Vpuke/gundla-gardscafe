@@ -1,38 +1,38 @@
 export default {
     name: "information",
     type: "document",
-    title: "Information",
+    title: "Contact information",
     fields: [
         {
         name: "facebookUrl",
         type: "string",
-        title: "Länk till Facebook",
+        title: "Facebook URL",
         },
         {
         name: "instagramUrl",
         type: "string",
-        title: "Länk till Instagram",
+        title: "Instagram URL",
         },
 
         {
         name: "phone",
         type: "string",
-        title: "Telefonnummer",
+        title: "Phone number",
         },
         {
         name: "mail",
         type: "string",
-        title: "Emailadress",
+        title: "Email address",
         },
         {
         name: "address",
         type: "address",
-        title: "Adress",
+        title: "Address",
         },
         {
         name: "openingHours",
         type: "openingHours",
-        title: "Öppettider",
+        title: "Opening hours",
         },
     ],
 };

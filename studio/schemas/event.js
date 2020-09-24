@@ -1,47 +1,47 @@
 export default {
     name: "event",
     type: "document",
-    title: "Återkommande evenemang",
+    title: "Events",
     fields: [
         {
         name: "description",
         type: "text",
-        title: "Beskrivning",
+        title: "Description",
         },
         {
         name: "monday",
         type: "string",
-        title: "Måndag",
+        title: "Monday",
         },
         {
         name: "tuesday",
         type: "string",
-        title: "Tisdag",
+        title: "Tuesday",
         },
         {
         name: "wednesday",
         type: "string",
-        title: "Onsdag",
+        title: "Wednesday",
         },
         {
         name: "thursday",
         type: "string",
-        title: "Torsdag",
+        title: "Thursday",
         },
         {
         name: "friday",
         type: "string",
-        title: "Fredag",
+        title: "Friday",
         },
         {
         name: "saturday",
         type: "string",
-        title: "Lördag",
+        title: "Saturday",
         },
         {
         name: "sunday",
         type: "string",
-        title: "Söndag",
+        title: "Sunday",
         },
     ],
   };
