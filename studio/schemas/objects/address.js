@@ -1,22 +1,22 @@
 export default {
     name: "address",
     type: "object",
-    title: "Adress",
+    title: "Address",
     fields: [
         {
         name: "address",
         type: "string",
-        title: "Gatuadress",
+        title: "Address",
         },
         {
         name: "postCode",
         type: "string",
-        title: "Postnummer",
+        title: "Postcode",
         },
         {
         name: "city",
         type: "string",
-        title: "Ort",
+        title: "City",
         },
     ]
 }
