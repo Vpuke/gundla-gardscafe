@@ -1,6 +1,5 @@
 import client from "../client";
 import groq from "groq";
-import Link from "next/link";
 import Navigation from "../components/Navigation/navigation";
 import Footer from "../components/Footer/footer";
 import Section from "../components/Section/section";
@@ -8,11 +7,8 @@ import MenuItem from "../components/MenuItem/menuItem";
 import About from "../components/About/About";
 import Event from "../components/Event/event";
 import BackgroundVideo from "../components/BackgroundVideo/backgroundVideo";
-import LogoAnimation from "../components/LogoAnimation/logoAnimation";
 import InstagramFeed from "../components/InstagramFeed/instagramFeed";
 import styled from "styled-components";
-
-// import PortableText from "@sanity/block-content-to-react";
 
 const StyledLandingPage = styled.div`
   height: 100vh;

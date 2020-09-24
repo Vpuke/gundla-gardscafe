@@ -40,7 +40,6 @@ const StyledAbout = styled.div`
 
   @media ${device.tablet} {
     text-align: start;
-    //width: 70%;
 
     h2 {
       font-size: 36px;
@@ -57,7 +56,7 @@ const StyledAbout = styled.div`
     justify-content: space-between;
 
     .aboutText {
-    width: 70vw;
+      width: 70vw;
     }
 
     h2 {
@@ -96,7 +95,7 @@ const About = ({ data }) => {
         />
       </div>
       <div className="tentImage">
-        <img src="/tent.svg" alt="Tent Icon"/>
+        <img src="/tent.svg" alt="Tent Icon" />
       </div>
     </StyledAbout>
   );
