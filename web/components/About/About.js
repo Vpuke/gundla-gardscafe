@@ -7,6 +7,10 @@ const StyledAbout = styled.div`
   justify-content: center;
   padding: 0 20px 0 20px;
 
+  .tentImage {
+    display: none;
+  }
+
   @media ${device.mobileS} {
     p {
       font-size: 12px;
@@ -36,7 +40,7 @@ const StyledAbout = styled.div`
 
   @media ${device.tablet} {
     text-align: start;
-    width: 70%;
+    //width: 70%;
 
     h2 {
       font-size: 36px;
@@ -49,13 +53,21 @@ const StyledAbout = styled.div`
 
   @media ${device.laptop} {
     text-align: start;
-    width: 70%;
+    padding: 0 60px 0 60px;
+    justify-content: space-between;
+
+    .aboutText {
+    width: 70vw;
+    }
 
     h2 {
       font-size: 64px;
     }
     p {
       font-size: 18px;
+    }
+    .tentImage {
+      display: block;
     }
   }
 `;
@@ -73,7 +85,7 @@ const About = ({ data }) => {
 
   return (
     <StyledAbout>
-      <div>
+      <div className="aboutText">
         <PortableText
           blocks={data.aboutUs[0].headLine}
           serializers={serializers}
@@ -82,6 +94,9 @@ const About = ({ data }) => {
           blocks={data.aboutUs[0].description}
           serializers={serializers}
         />
+      </div>
+      <div className="tentImage">
+        <img src="/tent.svg" alt="Tent Icon"/>
       </div>
     </StyledAbout>
   );
