@@ -32,7 +32,7 @@ a {
 
 .btn {
   border-left: 2px solid #FCFDF7;
-padding:5px 10px;
+  padding:5px 10px;
   cursor: pointer;
   font-family: IBM Plex Sans;
   font-weight: 400;
@@ -40,14 +40,11 @@ padding:5px 10px;
   text-align: left;
   cursor: pointer;
   text-decoration: none;
-
-
 }
 
 .btn:hover{
   background-color: white;
   color: black;
-
 }
 
 .imageWrapper {
@@ -110,21 +107,27 @@ small {
     p {
       font-size: 12px;
     }
+
     li {
       font-size: 12px;
     }
+
     a.btn {
       font-size: 12px;
     }
+
     .imageWrapper {
       margin: 10px 0;
     }
+
     .contact a {
       font-size: 14px;
     }
+
     .formBtn img{
       width 30px;
     }
+
     div.formBtn{
       text-align: center;
     }
@@ -134,9 +137,11 @@ small {
     p {
       font-size: 14px;
     }
+
     li {
       font-size: 14px;
     }
+
     a.btn {
       font-size: 14px;
     }
@@ -146,15 +151,19 @@ small {
     div.contact{
       margin: 60px 10px 20px 10px;
     }
+
     .contact{
       text-align:center;
     }
+
     ul{
       margin:40px 0 40px 0;
     }
+
     div.formBtn{
       margin-right:10px;
     }
+
     div.imageWrapper{
       margin: 40px 0 10px 0;
     }
@@ -164,21 +173,27 @@ small {
     p{
       font-size: 16px;
     }
+
     li{
       font-size 16px;
     }
+
     a.btn{
       font-size: 16px;
     }
+
     .imageWrapper{
       margin: 20px 0 ;
     }
+
     .contact a {
       font-size: 16px;
     }
+
     .formBtn img{
       width 40px;
     }
+
     .marginFooter{
       margin: 0px -5px 0 20px;
     }
@@ -191,6 +206,7 @@ small {
       justify-content: space-between;
       flex-wrap: wrap;
     }
+    
     .eventList {
       width: 40%;
     }

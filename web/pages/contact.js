@@ -116,12 +116,6 @@ input[type=text], textarea {
       width: 132px;
   }
 
-  @media ${device.mobileS} {
-    // form {
-      
-    // }
-  }
-
   @media ${device.tablet} {
     form {
         width: 60%;

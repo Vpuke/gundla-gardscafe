@@ -33,6 +33,7 @@ const StyledAbout = styled.div`
     p {
       font-size: 16px;
     }
+
     h2 {
       font-size: 25px;
     }
@@ -62,9 +63,11 @@ const StyledAbout = styled.div`
     h2 {
       font-size: 64px;
     }
+
     p {
       font-size: 18px;
     }
+
     .tentImage {
       display: block;
     }

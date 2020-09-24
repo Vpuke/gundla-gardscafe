@@ -13,6 +13,7 @@ const StyledImage = styled.div`
     height: 170px;
     padding 8px 8px 8px 8px;
   }
+  
   img {
     width: 100%;
     height: 100%;

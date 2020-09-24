@@ -29,7 +29,7 @@ const StyledFooter = styled.footer`
     margin: 0;
     font-size: 14px;
     font-weight: normal;
-    color: #FCFDF7;
+    color: #fcfdf7;
   }
 
   .socialMediaDiv {
@@ -47,6 +47,7 @@ const StyledFooter = styled.footer`
     width: 48px;
     margin-bottom: 20px;
   }
+
   .topFooter {
     display: flex;
   }
@@ -70,17 +71,21 @@ const StyledFooter = styled.footer`
     a {
       font-size: 12px;
     }
+
     .resize-icon-small {
       height: 36px;
       width: 36px;
     }
+
     .resize-icon-big {
       height: 40px;
       width: 40px;
     }
+
     .socialMediaDiv {
       margin: 5px;
     }
+
     .marginFooter {
       margin: 0 -10px 0 20px;
     }
@@ -96,10 +101,12 @@ const StyledFooter = styled.footer`
     .marginFooter {
       margin: 0 10px 0 40px;
     }
+
     .socialMediaDiv {
       padding: 10px 0;
       margin: 10px;
     }
+
     p,
     a {
       font-size: 16px;
@@ -111,16 +118,19 @@ const StyledFooter = styled.footer`
       display: flex;
       flex-direction: row;
     }
+
     .middleFooter {
       display: flex;
       flex-direction: row;
       align-items: center;
     }
+
     .bottomFooter {
       display: flex;
       flex-direction: row;
       align-items: center;
     }
+
     .socialMediaDiv {
       width: 200px;
       margin-bottom: 80px;

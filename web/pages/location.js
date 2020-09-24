@@ -42,12 +42,15 @@ const StyledLocation = styled.div`
     h1 {
       font-size: 25px;
     }
+
     h2 {
       font-size: 18px;
     }
+
     p {
       font-size: 12px;
     }
+    
     .locationParagraph {
       font-size: 10px;
     }
@@ -75,9 +78,11 @@ const StyledLocation = styled.div`
     h1 {
       font-size: 48px;
     }
+
     h2 {
       font-size: 25px;
     }
+
     p {
       font-size: 14px;
     }

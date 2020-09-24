@@ -6,7 +6,6 @@ const StyledMenu = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // color: white;
   padding: 16px;
   text-align: center;
 
@@ -61,18 +60,23 @@ const StyledMenu = styled.div`
 
   @media ${device.mobileS} {
     padding-top: 10px;
+
     h2 {
       font-size: 16px;
     }
+
     p {
       font-size: 12px;
     }
+
     .menuItemSoup {
       margin-top: 5px;
     }
+
     .menuItem {
       margin-top: 5px;
     }
+
     .drinkWrapper {
       margin-top: 5px;
     }
@@ -82,15 +86,19 @@ const StyledMenu = styled.div`
     h2 {
       font-size: 18px;
     }
+
     p {
       font-size: 14px;
     }
+
     .menuItemSoup {
       margin-top: 10px;
     }
+
     .menuItem {
       margin-top: 10px;
     }
+
     .drinkWrapper {
       margin-top: 10px;
     }
@@ -100,6 +108,7 @@ const StyledMenu = styled.div`
     div.menuItemSoupWrapper {
       margin-top: 50px;
     }
+
     p.menuInformation {
       margin-top: 60px;
     }
@@ -109,18 +118,23 @@ const StyledMenu = styled.div`
     h2 {
       font-size: 22px;
     }
+
     p {
       font-size: 16px;
     }
+
     .menuItemSoup {
       margin-top: 15px;
     }
+
     .menuItem {
       margin-top: 15px;
     }
+
     .drinkWrapper {
       margin-top: 15px;
     }
+
     p.menuInformation {
       margin-top: 20px;
     }
@@ -164,14 +178,17 @@ const StyledMenu = styled.div`
     p {
       font-size: 18px;
     }
+
     .menuInformation {
       margin-top: 100px;
       font-size: 16px;
     }
+
     .menuInformationTop {
       font-size: 16px;
       width: 500px;
     }
+
     p.menuInformation {
       margin-top: 170px;
     }
