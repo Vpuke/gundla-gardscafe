@@ -2,3 +2,4 @@ web/node_modules
 web/.next
 studio/node_modules
 .DS_Store
+node_modules
